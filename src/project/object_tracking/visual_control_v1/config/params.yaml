@@ -1,0 +1,26 @@
+pid_control:
+  ros__parameters:
+    Kp: 1.2
+    Ki: 0.25
+    Kd: 0.6
+    samplingtime: 0.01
+    max_lin_vel: 1.2
+    max_ang_vel: 1.5732
+    goal_tolerate_dis: 0.25
+    goal_tolerate_ang: 0.01
+
+irobot_PID:
+  ros__parameters:
+    T: 5.0
+    samplingtime: 0.05
+    max_acc: 1.0
+    max_ang_acc: 2.0
+    lim_max_vel: 0.8
+    lim_min_vel: 0.0
+    lim_max_ang_vel: 0.7
+    goal_tolerate_dis: 0.5
+    goal_tolerate_ang: 0.03
+    kp_dis : 1.0
+    kp_ang : 0.7
+    ki_ang : 0.0
+    kd_ang : 0.05

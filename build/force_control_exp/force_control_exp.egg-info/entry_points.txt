@@ -1,0 +1,3 @@
+[console_scripts]
+force_control_exp_node = force_control_exp.dynamic_updater:main
+

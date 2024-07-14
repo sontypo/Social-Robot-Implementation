@@ -1,0 +1,4 @@
+source;share/point_cal/local_setup.bash
+source;share/point_cal/local_setup.dsv
+source;share/point_cal/local_setup.sh
+source;share/point_cal/local_setup.zsh

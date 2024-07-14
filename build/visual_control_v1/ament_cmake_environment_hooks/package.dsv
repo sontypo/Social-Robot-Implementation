@@ -1,0 +1,4 @@
+source;share/visual_control_v1/local_setup.bash
+source;share/visual_control_v1/local_setup.dsv
+source;share/visual_control_v1/local_setup.sh
+source;share/visual_control_v1/local_setup.zsh

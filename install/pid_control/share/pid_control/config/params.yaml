@@ -1,0 +1,10 @@
+pid_control:
+  ros__parameters:
+    Kp: 1.2
+    Ki: 0.25
+    Kd: 0.6
+    samplingtime: 0.01
+    max_lin_vel: 1.2
+    max_ang_vel: 1.5732
+    goal_tolerate_dis: 0.25
+    goal_tolerate_ang: 0.01

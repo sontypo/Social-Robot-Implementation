@@ -1,0 +1,88 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclpy: 3.3.13 (/opt/ros/humble/share/rclpy/cmake)
+-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found rviz2: 11.2.12 (/opt/ros/humble/share/rviz2/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saun/ctrl_mr_dynamic/build/obstacle_detect
+Built target ament_cmake_python_copy_obstacle_detect
+running egg_info
+creating obstacle_detect.egg-info
+writing obstacle_detect.egg-info/PKG-INFO
+writing dependency_links to obstacle_detect.egg-info/dependency_links.txt
+writing top-level names to obstacle_detect.egg-info/top_level.txt
+writing manifest file 'obstacle_detect.egg-info/SOURCES.txt'
+reading manifest file 'obstacle_detect.egg-info/SOURCES.txt'
+writing manifest file 'obstacle_detect.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_obstacle_detect_egg
+-- Install configuration: ""
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/pythonpath.sh
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/pythonpath.dsv
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect/__init__.py
+Listing '/home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect'...
+Compiling '/home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect/__init__.py'...
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/lib/obstacle_detect/cost_map.py
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/lib/obstacle_detect/cost_map.launch.py
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/launch
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/launch/cost_map.launch.py
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/config
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/config/params.yaml
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/ament_index/resource_index/package_run_dependencies/obstacle_detect
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/ament_index/resource_index/parent_prefix_path/obstacle_detect
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/ament_prefix_path.sh
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/ament_prefix_path.dsv
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/path.sh
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/path.dsv
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.bash
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.sh
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.zsh
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.dsv
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/package.dsv
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/ament_index/resource_index/packages/obstacle_detect
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/cmake/obstacle_detectConfig.cmake
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/cmake/obstacle_detectConfig-version.cmake
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/package.xml

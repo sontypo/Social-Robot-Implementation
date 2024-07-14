@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/saun/ctrl_mr_dynamic/install/simple_control_pkg/lib/python3.10/site-packages",
+        "/home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/python3.10/site-packages",
+        "/home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/saun/ctrl_mr_dynamic/install/simple_control_pkg/lib/python3.10/site-packages",
+        "/home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/python3.10/site-packages",
+        "/home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

@@ -1,0 +1,8 @@
+source;share/run_sensor/hook/cmake_prefix_path.ps1
+source;share/run_sensor/hook/cmake_prefix_path.dsv
+source;share/run_sensor/hook/cmake_prefix_path.sh
+source;share/run_sensor/local_setup.bash
+source;share/run_sensor/local_setup.dsv
+source;share/run_sensor/local_setup.ps1
+source;share/run_sensor/local_setup.sh
+source;share/run_sensor/local_setup.zsh

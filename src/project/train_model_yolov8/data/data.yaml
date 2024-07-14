@@ -1,0 +1,14 @@
+names:
+- blue
+- green
+- red
+nc: 3
+roboflow:
+  license: CC BY 4.0
+  project: ai-2
+  url: https://universe.roboflow.com/nrsl/ai-2/dataset/1
+  version: 1
+  workspace: nrsl
+test: ../test/images
+train: ../train/images
+val: ../valid/images

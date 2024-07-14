@@ -1,0 +1,4 @@
+source;share/autonoumous_navigation/local_setup.bash
+source;share/autonoumous_navigation/local_setup.dsv
+source;share/autonoumous_navigation/local_setup.sh
+source;share/autonoumous_navigation/local_setup.zsh

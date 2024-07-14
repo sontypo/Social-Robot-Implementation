@@ -1,0 +1,4 @@
+source;share/obstacle_detect/local_setup.bash
+source;share/obstacle_detect/local_setup.dsv
+source;share/obstacle_detect/local_setup.sh
+source;share/obstacle_detect/local_setup.zsh

@@ -1,0 +1,8 @@
+cost_map:
+  ros__parameters:
+    map_resolution: 0.25
+    map_origin_x: -5.0
+    map_origin_y: -5.0
+    cost_scaling_factor: 0.3
+    gradient: 4
+

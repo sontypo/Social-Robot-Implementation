@@ -1,0 +1,5 @@
+sub_neartest_distance:
+  ros__parameters:
+    laser_max_dis: 5.0
+    base_link_frame: 'base_link'
+    base_scan_frame: 'base_scan'

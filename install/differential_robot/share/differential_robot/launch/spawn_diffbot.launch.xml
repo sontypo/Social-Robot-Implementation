@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="model" default="$(find-pkg-share diff_bot)/models/diffbot_irl.sdf" />
+
+  <arg name="start_gazebo" default="true" />
+  <arg name="start_rviz" default="true" />
+
+  <!-- Start Gazebo -->
+  <group if="$(var start_gazebo)">
+    <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
+      <!--arg name="paused" value="true"/>
+      <arg name="use_sim_time" value="true"/>
+      <arg name="gui" value="true"/>
+      <arg name="recording" value="false"/>
+      <arg name="debug" value="false"/>
+      <arg name="verbose" value="true"/-->
+    </include>
+
+    <!-- Spawn robot in Gazebo -->
+    <node name="spawn_robot_sdf" pkg="ros_gz_sim" exec="create"
+      args="-file $(var model) -x 0.0 -y 0.0 -z 0.0 -entity diff_bot" output="screen" />
+  </group>
+
+  <!-- TF description -->
+  <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" exec="robot_state_publisher" output="screen">
+    <param name="robot_description" value="$(command 'cat $(var model)')"/>
+    <param name="use_sim_time" value="true" />
+  </node> -->
+
+  <!-- Show in Rviz   -->
+  <!-- <group if="$(var start_rviz)">
+    <node name="rviz" pkg="rviz2" exec="rviz2" args="-d $(find-pkg-share minimal_diff_drive_robot)/config/robot.rviz">
+      <param name="use_sim_time" value="true" />
+    </node>
+  </group> -->
+
+</launch>

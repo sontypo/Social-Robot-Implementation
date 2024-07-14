@@ -1,0 +1,51 @@
+[0.694s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/object_detection': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/object_detection -- -j8 -l8
+[0.809s] Built target ament_cmake_python_copy_object_detection
+[1.428s] running egg_info
+[1.429s] writing object_detection.egg-info/PKG-INFO
+[1.429s] writing dependency_links to object_detection.egg-info/dependency_links.txt
+[1.430s] writing top-level names to object_detection.egg-info/top_level.txt
+[1.434s] reading manifest file 'object_detection.egg-info/SOURCES.txt'
+[1.435s] writing manifest file 'object_detection.egg-info/SOURCES.txt'
+[1.494s] Built target ament_cmake_python_build_object_detection_egg
+[1.520s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/object_detection' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/object_detection -- -j8 -l8
+[1.572s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/object_detection': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/object_detection
+[1.594s] -- Install configuration: ""
+[1.594s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/environment/pythonpath.sh
+[1.594s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/environment/pythonpath.dsv
+[1.595s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/local/lib/python3.10/dist-packages/object_detection-1.0.0-py3.10.egg-info
+[1.595s] -- Installing: /home/saun/ctrl_mr_dynamic/install/object_detection/local/lib/python3.10/dist-packages/object_detection-1.0.0-py3.10.egg-info/dependency_links.txt
+[1.595s] -- Installing: /home/saun/ctrl_mr_dynamic/install/object_detection/local/lib/python3.10/dist-packages/object_detection-1.0.0-py3.10.egg-info/top_level.txt
+[1.595s] -- Installing: /home/saun/ctrl_mr_dynamic/install/object_detection/local/lib/python3.10/dist-packages/object_detection-1.0.0-py3.10.egg-info/SOURCES.txt
+[1.595s] -- Installing: /home/saun/ctrl_mr_dynamic/install/object_detection/local/lib/python3.10/dist-packages/object_detection-1.0.0-py3.10.egg-info/PKG-INFO
+[1.595s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/local/lib/python3.10/dist-packages/object_detection
+[1.595s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/local/lib/python3.10/dist-packages/object_detection/__init__.py
+[1.669s] Listing '/home/saun/ctrl_mr_dynamic/install/object_detection/local/lib/python3.10/dist-packages/object_detection'...
+[1.677s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/lib/object_detection/object_detection.py
+[1.677s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/lib/object_detection/real_objection.py
+[1.677s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/lib/object_detection/object_detection.launch.py
+[1.677s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/launch
+[1.677s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/launch/object_detection_gazebo.launch.py
+[1.678s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/launch/__pycache__
+[1.678s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/launch/__pycache__/object_detection.launch.cpython-310.pyc
+[1.678s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/launch/object_detection.launch.py
+[1.678s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/config
+[1.679s] -- Installing: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/config/params_gazebo.yaml
+[1.679s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/config/params.yaml
+[1.679s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/rviz2
+[1.679s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/rviz2/object_detection_rviz2.rviz
+[1.679s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/ament_index/resource_index/package_run_dependencies/object_detection
+[1.679s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/ament_index/resource_index/parent_prefix_path/object_detection
+[1.680s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/environment/ament_prefix_path.sh
+[1.680s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/environment/ament_prefix_path.dsv
+[1.680s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/environment/path.sh
+[1.680s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/environment/path.dsv
+[1.680s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/local_setup.bash
+[1.680s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/local_setup.sh
+[1.680s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/local_setup.zsh
+[1.681s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/local_setup.dsv
+[1.681s] -- Installing: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/package.dsv
+[1.681s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/ament_index/resource_index/packages/object_detection
+[1.681s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/cmake/object_detectionConfig.cmake
+[1.681s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/cmake/object_detectionConfig-version.cmake
+[1.681s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/object_detection/share/object_detection/package.xml
+[1.684s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/object_detection' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/object_detection

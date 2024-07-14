@@ -1,0 +1,6 @@
+source;share/force_control_exp/hook/pythonpath.ps1
+source;share/force_control_exp/hook/pythonpath.dsv
+source;share/force_control_exp/hook/pythonpath.sh
+source;share/force_control_exp/hook/ament_prefix_path.ps1
+source;share/force_control_exp/hook/ament_prefix_path.dsv
+source;share/force_control_exp/hook/ament_prefix_path.sh

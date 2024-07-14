@@ -1,0 +1,21 @@
+object_detection:
+  ros__parameters:
+    topic_camera: '/kinect/image_raw'
+    cam_name: 'kinect'
+    model_yolo: 'yolov8n.pt'
+    model_yolo_custom: 'gazebo_person.pt'  # gazebo_detect_170124  yolov8n gazebo_person
+    topic_object: 'object_detection'
+    my_cls: 0
+
+real_objection:
+  ros__parameters:
+    cam_name: 'kinect'
+    topic_object: 'object_detection'
+    topic_camera_depth: '/kinect/depth/image_raw'
+    topic_camera_info: '/kinect/depth/camera_info'
+    base_frame: 'kinect_link'
+    topic_person: 'person'
+    permit_distance: 10.0
+    limit_x: 260.0
+    limit_y: 300.0
+

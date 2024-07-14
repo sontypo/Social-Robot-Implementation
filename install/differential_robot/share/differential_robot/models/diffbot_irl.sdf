@@ -1,0 +1,284 @@
+<?xml version="1.1" ?>
+<sdf version="1.5">
+    <model name="diff_bot">
+        <pose>0 0 .5 0 0 0</pose>
+        <!-- Main Chassis -->
+        <link name="base_link">
+        <!-- Physics -->
+        <collision name="collision">
+            <!-- <pose>0 0 -0.3 0 0 0</pose> -->
+            <pose>0 0 0.03 0 0 0</pose>
+            <geometry>
+                <mesh>
+                    <uri>model://models/base_link.STL</uri>
+                </mesh>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass>10</mass>
+            <pose>0.0 0.0 0.03 0 0 0</pose>
+            <inertia>
+            <ixx>0.018771*2</ixx>
+            <ixy>4.3757E-09*2</ixy>
+            <ixz>0.00017048*2</ixz>
+            <iyy>0.03253*2</iyy>
+            <iyz>1.7492E-11*2</iyz>
+            <izz>0.04738*2</izz>
+            </inertia>
+        </inertial>
+        <!-- Visual -->
+        <!-- Base frame -->
+        <visual name="base">
+            <pose>0 0 0.03 0 0 0</pose>
+            <geometry>
+                <mesh>
+                    <uri>model://models/base_link.STL</uri>
+                </mesh> 
+            </geometry>
+            <material>
+            <!-- 
+                <name>Gazebo/Black</name>
+             -->
+            <color rgba="0.66667 0.69804 0.76471 1" />
+            </material>
+        </visual>
+        <!-- Caster front -->
+        <collision name="caster_front_collision">
+            <pose>0.2 0 0.02 0 0 0</pose>
+            <geometry>
+                <sphere>
+                    <radius>0.02</radius>
+                </sphere>
+            </geometry>
+            <surface>
+            <friction>
+                <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+                <slip1>1.0</slip1>
+                <slip2>1.0</slip2>
+                </ode>
+            </friction>
+            </surface>
+        </collision>
+        <visual name="caster_front_visual">
+            <pose>0.2 0 0.02 0 0 0</pose>
+            <geometry>
+                <sphere>
+                    <radius>0.02</radius>
+                </sphere>
+            </geometry>
+            <material>
+            
+                <color rgba="0.66667 0.69804 0.76471 1" />
+            
+            </material>
+        </visual>
+        <!-- Caster back -->
+        <collision name="caster_back_collision">
+            <pose>-0.2 0 0.02 0 0 0</pose>
+            <geometry>
+                <sphere>
+                    <radius>0.02</radius>
+                </sphere>
+            </geometry>
+            <surface>
+            <friction>
+                <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+                <slip1>1.0</slip1>
+                <slip2>1.0</slip2>
+                </ode>
+            </friction>
+            </surface>
+        </collision>
+        <visual name="caster_back_visual">
+            <pose>-0.2 0 0.02 0 0 0</pose>
+            <geometry>
+                <sphere>
+                    <radius>0.02</radius>
+                </sphere>
+            </geometry>
+            <material>
+            
+                <color rgba="0.66667 0.69804 0.76471 1" />
+            
+            </material>
+        </visual>
+        </link>
+
+        <!-- Cover link -->
+        <link name="cover_link">
+            <!-- Physics -->
+            <collision name="cover_collision">
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+                <mesh>
+                    <uri>model://cover_link.STL</uri>
+                </mesh>
+            </geometry>
+            </collision>
+            <inertial>
+            <mass>0.906</mass>
+            <pose>-4.6126E-06 -9.9142E-06 -0.015363 0 0 0</pose>
+            <inertia>
+                <ixx>0.0046528*2</ixx>
+                <ixy>-1.3363E-18*2</ixy>
+                <ixz>-7.2541E-19*2</ixz>
+                <iyy>0.007642*2</iyy>
+                <iyz>-1.6397E-19*2</iyz>
+                <izz>0.012232*2</izz>
+            </inertia>
+            </inertial>
+            <!-- Visual -->
+            <!-- Base frame -->
+            <visual name="cover_visual">
+            <pose>0 0 0.03 0 0 0</pose>
+            <geometry>
+                <mesh>
+                    <uri>model://cover_link.STL</uri>
+                    <!-- <filename>(find-pkg-share diff_bot)/meshes/cover_link.STL</filename> -->
+                </mesh> 
+            </geometry>
+            <material>
+                <!-- 
+                <name>Gazebo/Orange</name>
+                 -->
+            <color rgba="1 0.54902 0 1" />
+            </material>
+            </visual>
+        </link>
+        <joint name="cover_joint" type="fixed">
+            <parent>base_link</parent>
+            <child>cover_link</child>
+            <axis>
+            <xyz>0 0 0.245</xyz>
+            <use_parent_model_frame>true</use_parent_model_frame>
+            </axis>
+        </joint>
+
+        <!-- Left Wheel -->
+        <link name="left_wheel">
+        <inertial>
+            <mass>1</mass>
+            <pose>0 0 0 0 0 0</pose>
+            <inertia>
+            <ixx>0.145833</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.145833</iyy>
+            <iyz>0</iyz>
+            <izz>0.125</izz>
+            </inertia>
+        </inertial>
+        <collision name="left_wheel_collision">
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <cylinder>
+                <radius>0.07</radius>
+                <length>0.05</length>
+            </cylinder>
+            </geometry>
+        </collision>
+        <visual name="left_wheel_visual">
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <uri>model://left_tire.stl</uri>
+                <!-- <filename>(find-pkg-share diff_bot)/meshes/cover_link.STL</filename> -->
+            </mesh>
+            </geometry>
+            <material>
+            
+                <name>Gazebo/Grey</name>
+            
+            </material>
+        </visual>
+        </link>
+        <joint name="left_wheel_joint" type="revolute">
+        <parent>base_link</parent>
+        <child>left_wheel</child>
+        <pose>0.0  0.20918 0.07 -1.57265 0 0</pose>
+        <axis>
+            <xyz>0 0 1</xyz>
+            <use_parent_model_frame>true</use_parent_model_frame>
+        </axis>
+        <physics>
+            <ode>
+            <limit>
+                <cfm>0.000000</cfm>
+                <erp>0.900000</erp>
+            </limit>
+            </ode>
+        </physics>
+        </joint>
+
+        <!-- Right Wheel -->
+        <link name="right_wheel">
+            <inertial>
+            <mass>1</mass>
+            <pose>0 0 0 0 0 0</pose>
+            <inertia>
+                <ixx>0.145833</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.145833</iyy>
+                <iyz>0</iyz>
+                <izz>0.125</izz>
+            </inertia>
+            </inertial>
+            <collision name="right_wheel_collision">
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+                <cylinder>
+                <radius>0.07</radius>
+                <length>0.05</length>
+                </cylinder>
+            </geometry>
+            </collision>
+            <visual name="right_wheel_visual">
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+                <mesh>
+                <uri>model://right_tire.stl</uri>
+                <!-- <filename>$(find-pkg-share diff_bot)/meshes/right_tire.stl</filename> -->
+                </mesh>
+            </geometry>
+            <material>
+                
+                <name>Gazebo/Grey</name>
+                
+            </material>
+            </visual>
+        </link>
+        <joint name="right_wheel_joint" type="revolute">
+            <parent>base_link</parent>
+            <child>right_wheel</child>
+            <pose>0.0  -0.20918 0.07 -1.57265 0 0</pose>
+            <axis>
+            <xyz>0 0 1</xyz>
+            <use_parent_model_frame>true</use_parent_model_frame>
+            </axis>
+            <physics>
+            <ode>
+                <limit>
+                <cfm>0.000000</cfm>
+                <erp>0.900000</erp>
+                </limit>
+            </ode>
+            </physics>
+        </joint>
+        
+        <plugin name="ignition::gazebo::systems::DiffDrive" filename="libignition-gazebo-diff-drive-system.so">
+            <alwaysOn>true</alwaysOn>
+            <updateRate>50</updateRate>
+            <left_joint>left_wheel_joint</left_joint>
+            <right_joint>right_wheel_joint</right_joint>
+            <wheel_separation>0.4</wheel_separation>
+            <wheel_radius>0.14</wheel_radius>
+            <topic>cmd_vel</topic>
+            <odom_publish_frequency>1</odom_publish_frequency>
+        </plugin>
+    </model>
+</sdf>
