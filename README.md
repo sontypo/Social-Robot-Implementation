@@ -1,20 +1,20 @@
-## Social-Robot-Implementation
+# Social-Robot-Implementation
 
 Maintainer: Hong-Son Nguyen <hongsonnguyen.haui@gmail.com>
 ---------------------------------------------------------------
 
-# Requirement
+## Requirement
 - OS: Ubuntu 20.04 or later version
 - Environment: ROS2, Gazebo classic
 - Python libraries: torch, ultralytics...
 ---------------------------------------------------------------
 
-# Note: Before running the simulation program
+## Note: Before running the simulation program
 - First, you need to rebuild the workspace on your computer
 - There are some code in the workspace contain the previous user's paths, so you need to identify the correct paths on your computer and modify them accordingly.
 ---------------------------------------------------------------
 
-# Steps to run the simulation program on Gazebo
+## Steps to run the simulation program on Gazebo
 - Step 1: Initializing differential-drive mobile robot and single actor in Gazebo, make sure that you always "source install/setup.bash" 
   > ros2 launch differential_robot classic_spawn_diffbot.launch.py
 - Step 2: Open another terminal, launching the object detetion model for human recognition task
