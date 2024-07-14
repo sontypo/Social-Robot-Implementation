@@ -1,6 +1,6 @@
 # Differential_Robot_Gazebo_Simulation
 
-Maintainer: Hong-Son <hongsonnguyen.haui@gmail.com>
+Maintainer: Hong-Son Nguyen <hongsonnguyen.haui@gmail.com>
 ---------------------------------------------------------------
 
 % Requirement
