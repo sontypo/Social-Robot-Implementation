@@ -1,6 +1,6 @@
 # Social-Robot-Implementation
 
-Maintainer: Hong-Son Nguyen <hongsonnguyen.haui@gmail.com>
+Maintainer: <hongsonnguyen.haui@gmail.com>
 ---------------------------------------------------------------
 
 ## Requirement
