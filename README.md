@@ -1,7 +1,6 @@
 # Differential_Robot_Gazebo_Simulation
 
-Maintainer: Hong-Son
-Email: hongsonnguyen.haui@gmail.com
+Maintainer: Hong-Son <hongsonnguyen.haui@gmail.com>
 ---------------------------------------------------------------
 
 % Requirement
@@ -17,8 +16,8 @@ Email: hongsonnguyen.haui@gmail.com
 
 % Steps to run the simulation program on Gazebo
 - Step 1: Initializing differential-drive mobile robot and single actor in Gazebo, make sure that you always "source install/setup.bash" 
-  >> ros2 launch differential_robot classic_spawn_diffbot.launch.py
+  > ros2 launch differential_robot classic_spawn_diffbot.launch.py
 - Step 2: Open another terminal, launching the object detetion model for human recognition task
-  >> ros2 launch object_detection object_detection_gazebo.launch.py
+  > ros2 launch object_detection object_detection_gazebo.launch.py
 - Step 3: Open one more tab on your terminal, then running the force_computation node for dynamic model
-  >> ros2 run force_control_exp force_control_exp_node
+  > ros2 run force_control_exp force_control_exp_node
