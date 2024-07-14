@@ -83,9 +83,9 @@ class DynamicUpdater(Node):
 
         for marker in markers_msg.markers:
             # Compute the vectorized distance between the robot and the object
-            vec_dis = np.array([marker.pose.position.x - self.robot_pose.x, marker.pose.position.y - self.robot_pose.y])
+            vec_dis = np.array([marker.pose.position.x - self.robot_pose.position.x, marker.pose.position.y - self.robot_pose.position.y])
             # Compute the distance between the robot and the object
-            distance = math.sqrt((marker.pose.position.x - self.robot_pose.x)**2 + (marker.pose.position.y - self.robot_pose.y)**2)
+            distance = math.sqrt((marker.pose.position.x - self.robot_pose.position.x)**2 + (marker.pose.position.y - self.robot_pose.position.y)**2)
             
             # Current velocities of the mobile robot
             self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
