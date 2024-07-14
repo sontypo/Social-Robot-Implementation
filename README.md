@@ -1,4 +1,4 @@
-# Differential_Robot_Gazebo_Simulation
+# Social-Robot-Implementation
 
 Maintainer: Hong-Son Nguyen <hongsonnguyen.haui@gmail.com>
 ---------------------------------------------------------------
