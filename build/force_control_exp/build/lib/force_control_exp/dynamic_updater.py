@@ -13,7 +13,7 @@ from tf_transformations import euler_from_quaternion
 class DynamicUpdater(Node):
     def __init__(self):
         super().__init__('dynamic_updater')
-        self.robot_pose = Pose()
+        self.robot_pose = Point()
         self.robot_velocity = Twist()
         
         self.total_mass = 25.0
@@ -82,29 +82,36 @@ class DynamicUpdater(Node):
             return
 
         for marker in markers_msg.markers:
-            # Compute the vectorized distance between the robot and the object
-            vec_dis = np.array([marker.pose.position.x - self.robot_pose.x, marker.pose.position.y - self.robot_pose.y])
-            # Compute the distance between the robot and the object
-            distance = math.sqrt((marker.pose.position.x - self.robot_pose.x)**2 + (marker.pose.position.y - self.robot_pose.y)**2)
-            
-            # Current velocities of the mobile robot
-            self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
-            
-            # Compute the designated force applied to the mobile robot
-            F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
-            
-            # Compute the social force applied to the mobile robot
-            F_soc = self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance) 
-            
-            # Total force applied to the mobile robot
-            self.F_total = F_des + F_soc
+            if marker is not None:
+                # Compute the vectorized distance between the robot and the object
+                vec_dis = np.array([marker.pose.position.x - self.robot_pose.x, marker.pose.position.y - self.robot_pose.y])
+                print(vec_dis[0], vec_dis[1])
+                # Compute the distance between the robot and the object
+                distance = math.sqrt((marker.pose.position.x - self.robot_pose.x)**2 + (marker.pose.position.y - self.robot_pose.y)**2)
+                self.get_logger().info(f'Distance: {distance}')
+                
+                # Current velocities of the mobile robot
+                self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
+                
+                # Compute the designated force applied to the mobile robot
+                F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
+                
+                # Compute the social force applied to the mobile robot
+                F_soc = self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance) 
+                self.get_logger().info(f'F_des: {F_des}')
+                # Total force applied to the mobile robot
+                self.F_total = F_des + F_soc
 
-            # # Create and publish the force message
-            # force_msg = Int16MultiArray()
-            # force_msg.data.append(F_total[0])
-            # force_msg.data.append(F_total[1])
-            # self.force_publisher.publish(force_msg)
-            self.get_logger().info(f'Fm: {self.F_total[0]} | Fn: {self.F_total[1]}')
+                # # Create and publish the force message
+                # force_msg = Int16MultiArray()
+                # force_msg.data.append(F_total[0])
+                # force_msg.data.append(F_total[1])
+                # self.force_publisher.publish(force_msg)
+                # self.get_logger().info(f'Fm: {self.F_total[0]} | Fn: {self.F_total[1]}')
+            else: 
+                vel_msg = Twist()
+                self.velocity_command.publish(vel_msg)
+                
             
     # def actor_pose_callback(self, actor):
     #     try:

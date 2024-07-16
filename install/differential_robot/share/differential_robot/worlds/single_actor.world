@@ -152,51 +152,51 @@
               <pose>2 0 0 0 0 0.5235987</pose>
             </waypoint>
             <waypoint>
-              <time>5</time>
+              <time>10</time>
               <pose>4 1 0 0 0 1.0471975</pose>
             </waypoint>
             <waypoint>
-              <time>10</time>
+              <time>20</time>
               <pose>5 2 0 0 0 0</pose>
             </waypoint>
             <waypoint>
-              <time>15</time>
+              <time>30</time>
               <pose>7 2 0 0 0 -1.0471975</pose>
             </waypoint>
             <waypoint>
-              <time>20</time>
+              <time>40</time>
               <pose>8 1 0 0 0 -1.570796</pose>
             </waypoint>
             <waypoint>
-              <time>30</time>
+              <time>55</time>
               <pose>8 -1 0 0 0 -2.094395</pose>
             </waypoint>
             <waypoint>
-              <time>35</time>
+              <time>65</time>
               <pose>7 -2 0 0 0 3.141592</pose>
             </waypoint>
             <waypoint>
-              <time>40</time>
+              <time>75</time>
               <pose>5 -2 0 0 0 2.094395</pose>
             </waypoint>
             <waypoint>
-              <time>45</time>
+              <time>85</time>
               <pose>4 -1 0 0 0 2.617993</pose>
             </waypoint>
             <waypoint>
-              <time>50</time>
+              <time>95</time>
               <pose>2 0 0 0 0 4.712</pose>
             </waypoint>
           </trajectory>
         </script>
       </actor>    
 
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose>0.05003 1.24623 23.7217 1e-05 1.5698 -1.572</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
+      <gui fullscreen='0'>
+        <camera name='user_camera'>
+          <pose frame=''>0.319654 -0.235002 9.29441 0 1.5138 0.009599</pose>
+          <view_controller>orbit</view_controller>
+          <projection_type>perspective</projection_type>
+        </camera>
+      </gui>
   </world>
 </sdf>
