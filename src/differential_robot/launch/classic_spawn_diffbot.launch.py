@@ -48,8 +48,20 @@ def generate_launch_description():
         executable='robot_state_publisher',
         name='robot_state_publisher',
         output='screen',
-        parameters=[{'use_sim_time': use_sim_time}],
-        arguments=[robot_desc])
+        parameters=[{'use_sim_time': use_sim_time}, {'robot_description': robot_desc}])
+    
+    # Publish the joint states of the robot
+    start_joint_state_publisher_cmd = Node(
+        package='joint_state_publisher',
+        executable='joint_state_publisher',
+        name='joint_state_publisher')
+    
+    spawn_joint_state_broadcaster = Node(
+        package='controller_manager',
+        executable='spawner.py',
+        arguments=['joint_state_broadcaster', '-c', '/controller_manager'],
+        output='screen',
+    )
 
     # Launch configuration variables specific to simulation
     x_pose = LaunchConfiguration('x_pose', default='0.0')
@@ -92,6 +104,8 @@ def generate_launch_description():
     # ld.add_action(gzserver_cmd)
     # ld.add_action(gzclient_cmd)
     ld.add_action(robot_state_publisher)
+    ld.add_action(start_joint_state_publisher_cmd)
+    ld.add_action(spawn_joint_state_broadcaster)
     ld.add_action(start_gazebo_ros_spawner_cmd)
     ld.add_action(gazebo)
     

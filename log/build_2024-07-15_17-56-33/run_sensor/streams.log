@@ -1,0 +1,45 @@
+[0.028s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/run_sensor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/run_sensor -- -j8 -l8
+[0.162s] Built target ament_cmake_python_copy_run_sensor
+[0.657s] running egg_info
+[0.658s] writing run_sensor.egg-info/PKG-INFO
+[0.658s] writing dependency_links to run_sensor.egg-info/dependency_links.txt
+[0.658s] writing top-level names to run_sensor.egg-info/top_level.txt
+[0.661s] reading manifest file 'run_sensor.egg-info/SOURCES.txt'
+[0.662s] writing manifest file 'run_sensor.egg-info/SOURCES.txt'
+[0.698s] Built target ament_cmake_python_build_run_sensor_egg
+[0.907s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/run_sensor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/run_sensor -- -j8 -l8
+[0.949s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/run_sensor': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/run_sensor
+[0.964s] -- Install configuration: ""
+[0.965s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/environment/pythonpath.sh
+[0.965s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/environment/pythonpath.dsv
+[0.965s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/local/lib/python3.10/dist-packages/run_sensor-1.0.0-py3.10.egg-info
+[0.965s] -- Installing: /home/saun/ctrl_mr_dynamic/install/run_sensor/local/lib/python3.10/dist-packages/run_sensor-1.0.0-py3.10.egg-info/dependency_links.txt
+[0.965s] -- Installing: /home/saun/ctrl_mr_dynamic/install/run_sensor/local/lib/python3.10/dist-packages/run_sensor-1.0.0-py3.10.egg-info/top_level.txt
+[0.965s] -- Installing: /home/saun/ctrl_mr_dynamic/install/run_sensor/local/lib/python3.10/dist-packages/run_sensor-1.0.0-py3.10.egg-info/SOURCES.txt
+[0.966s] -- Installing: /home/saun/ctrl_mr_dynamic/install/run_sensor/local/lib/python3.10/dist-packages/run_sensor-1.0.0-py3.10.egg-info/PKG-INFO
+[0.966s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/local/lib/python3.10/dist-packages/run_sensor
+[0.966s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/local/lib/python3.10/dist-packages/run_sensor/__init__.py
+[1.044s] Listing '/home/saun/ctrl_mr_dynamic/install/run_sensor/local/lib/python3.10/dist-packages/run_sensor'...
+[1.051s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/lib/run_sensor/object_tracking_gazebo.launch.py
+[1.052s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/lib/run_sensor/object_tracking_real.launch.py
+[1.052s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/launch
+[1.052s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/launch/object_tracking_gazebo.launch.py
+[1.053s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/launch/object_tracking_real.launch.py
+[1.053s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/launch/__pycache__
+[1.053s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/launch/__pycache__/object_tracking_real.launch.cpython-310.pyc
+[1.054s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/ament_index/resource_index/package_run_dependencies/run_sensor
+[1.054s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/ament_index/resource_index/parent_prefix_path/run_sensor
+[1.054s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/environment/ament_prefix_path.sh
+[1.054s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/environment/ament_prefix_path.dsv
+[1.054s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/environment/path.sh
+[1.055s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/environment/path.dsv
+[1.055s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/local_setup.bash
+[1.055s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/local_setup.sh
+[1.055s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/local_setup.zsh
+[1.056s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/local_setup.dsv
+[1.057s] -- Installing: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/package.dsv
+[1.057s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/ament_index/resource_index/packages/run_sensor
+[1.058s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/cmake/run_sensorConfig.cmake
+[1.058s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/cmake/run_sensorConfig-version.cmake
+[1.058s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/run_sensor/share/run_sensor/package.xml
+[1.067s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/run_sensor' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/run_sensor

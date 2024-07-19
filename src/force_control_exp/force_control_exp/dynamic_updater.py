@@ -21,9 +21,9 @@ class DynamicUpdater(Node):
         m_wheel = 2.5
         R_wheel = 0.08
         self.I_w = 1/2 * m_wheel * R_wheel*R_wheel
-        self.I_b = 1/12 * m_base * (0.26*0.26 + 0.13*0.13 + 0.605*0.605)
-        self.d2origin = 0.01 #m
-        self.tau_d = 2.0
+        self.I_b = 1/12 * m_base * (0.26*0.26 + 0.13*0.13 + 0.605*0.605)  # 0.416 + 0.8
+        self.d2origin = 0.08 #m
+        self.tau_d = 4.0
         self.v_max_robot = 2.5
         self.v_des = np.array([self.v_max_robot, 0])
         self.F_total = np.array([0,0])
@@ -82,29 +82,41 @@ class DynamicUpdater(Node):
             return
 
         for marker in markers_msg.markers:
-            # Compute the vectorized distance between the robot and the object
-            vec_dis = np.array([marker.pose.position.x - self.robot_pose.x, marker.pose.position.y - self.robot_pose.y])
-            # Compute the distance between the robot and the object
-            distance = math.sqrt((marker.pose.position.x - self.robot_pose.x)**2 + (marker.pose.position.y - self.robot_pose.y)**2)
-            
-            # Current velocities of the mobile robot
-            self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
-            
-            # Compute the designated force applied to the mobile robot
-            F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
-            
-            # Compute the social force applied to the mobile robot
-            F_soc = self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance) 
-            
-            # Total force applied to the mobile robot
-            self.F_total = F_des + F_soc
+            if marker is not None:
+                # Compute the vectorized distance between the robot and the object
+                vec_dis = np.array([-marker.pose.position.x + self.robot_pose.x, -marker.pose.position.y + self.robot_pose.y])
+                print(vec_dis[0], vec_dis[1])
+                # Compute the distance between the robot and the object
+                distance = math.sqrt((marker.pose.position.x - self.robot_pose.x)**2 + (marker.pose.position.y - self.robot_pose.y)**2)
+                # self.get_logger().info(f'Distance: {distance}')
+                
+                # Current velocities of the mobile robot
+                self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
+                
+                # Compute the designated force applied to the mobile robot
+                F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
+                
+                # Compute the social force applied to the mobile robot
+                F_soc = self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance) 
+                # self.get_logger().info(f'F_des: {F_des}')
+                # Total force applied to the mobile robot
+                self.F_total = F_des + F_soc
 
-            # # Create and publish the force message
-            # force_msg = Int16MultiArray()
-            # force_msg.data.append(F_total[0])
-            # force_msg.data.append(F_total[1])
-            # self.force_publisher.publish(force_msg)
-            self.get_logger().info(f'Fm: {self.F_total[0]} | Fn: {self.F_total[1]}')
+                # # Create and publish the force message
+                # force_msg = Int16MultiArray()
+                # force_msg.data.append(F_total[0])
+                # force_msg.data.append(F_total[1])
+                # self.force_publisher.publish(force_msg)
+                # self.get_logger().info(f'Fm: {self.F_total[0]} | Fn: {self.F_total[1]}')
+            else: 
+                # Current velocities of the mobile robot
+                self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
+                
+                # Compute the designated force applied to the mobile robot
+                F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
+                
+                self.F_total = F_des
+                
             
     # def actor_pose_callback(self, actor):
     #     try:
