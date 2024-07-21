@@ -105,7 +105,7 @@ def generate_launch_description():
     # ld.add_action(gzclient_cmd)
     ld.add_action(robot_state_publisher)
     ld.add_action(start_joint_state_publisher_cmd)
-    ld.add_action(spawn_joint_state_broadcaster)
+    # ld.add_action(spawn_joint_state_broadcaster)
     ld.add_action(start_gazebo_ros_spawner_cmd)
     ld.add_action(gazebo)
     
