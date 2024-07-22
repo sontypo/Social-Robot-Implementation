@@ -29,7 +29,6 @@ class DynamicUpdater(Node):
         self.sigma = 3.0    # for computing new v_des
         # self.v_des = np.array([self.v_max_robot, 0])      # this one is for the previous version
         self.v_des = np.array([0, 0])   # new version of v_des for computing F_des
-        self.F_des = np.array([0, 0])
         self.F_soc = np.array([0, 0])
         self.F_total = np.array([0, 0])
         self.theta = 0.0
@@ -124,19 +123,7 @@ class DynamicUpdater(Node):
             # Update robot position
             self.robot_prev_pose = self.robot_pose
         else: 
-            self.F_bound = np.array([0, 0])
-            
-        # Designed velocity of the mobile robot
-        s_ = np.linalg.norm(self.F_des) + np.linalg.norm(self.F_bound)
-        self.v_des = math.exp( -s_ / self.sigma ) * self.v_max_robot
-        
-        # Current velocities of the mobile robot
-        self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
-        
-        # Compute the designated force applied to the mobile robot
-        F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
-        self.F_des = F_des
-        print(self.v_des)
+            self.F_bound = np.array([0, 0])    
         
         for marker in markers_msg.markers:
             if marker is not None:
@@ -149,6 +136,17 @@ class DynamicUpdater(Node):
                                               
                 # Compute the social force applied to the mobile robot
                 self.F_soc = self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance) 
+                
+                # Current velocities of the mobile robot
+                self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
+                
+                # Designed velocity of the mobile robot
+                s_ = np.linalg.norm(self.F_soc) + np.linalg.norm(self.F_bound)
+                self.v_des = math.exp( -s_ / self.sigma ) * self.v_max_robot
+                
+                # Compute the designated force applied to the mobile robot
+                F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
+                print(self.v_des)
                 
             # Total force applied to the mobile robot
             self.F_total = F_des + self.F_soc + self.F_bound
