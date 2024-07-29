@@ -9,34 +9,39 @@ from gazebo_msgs.msg import ModelStates
 import math
 import numpy as np
 from tf_transformations import euler_from_quaternion
+import time
 
 class DynamicUpdater(Node):
     def __init__(self):
         super().__init__('dynamic_updater')
         self.robot_pose = Point()
         self.robot_velocity = Twist()
+        self.object_linear_vel = Twist().linear
         
         self.total_mass = 25.0
         m_base = 20.0
         m_wheel = 2.5
         R_wheel = 0.08
         self.I_w = 1/2 * m_wheel * R_wheel*R_wheel
-        self.I_b = 1/12 * m_base * (0.26*0.26 + 0.13*0.13 + 0.605*0.605)  # 0.416 + 0.8
-        self.d2origin = 0.08 #m
-        self.tau_d = 4.0
+        # self.I_b = 1/12 * m_base * (0.26*0.26 + 0.13*0.13 + 0.605*0.605)  # 0.416 + 0.8
+        self.I_b = 1.216
+        self.d2origin = 0.2 #m
+        self.tau_d = 0.2953125
         self.v_max_robot = 2.5
         # designated velocity 
         self.sigma = 3.0    # for computing new v_des
         # self.v_des = np.array([self.v_max_robot, 0])      # this one is for the previous version
         self.v_des = np.array([0, 0])   # new version of v_des for computing F_des
+        self.F_des = np.array([0, 0])
         self.F_soc = np.array([0, 0])
         self.F_total = np.array([0, 0])
         self.theta = 0.0
+        self.Lambda = 0.04375
         
         # Force manitude
-        self.alpha = 12.0
+        self.alpha = 83.518066
         # Force range
-        self.beta = 0.66
+        self.beta = 1.806738
         
         # Added boundary force's terms
         self.F_bound_R = None
@@ -51,6 +56,8 @@ class DynamicUpdater(Node):
 
         # Subscriber for the object's position (topic /person in this case)
         self.create_subscription(MarkerArray, '/person', self.object_position_callback, 10)
+        self.object_positions = {}  # Store the previous positions and timestamps of object
+
         
         # Subscriber for the object's position (an object in gazebo, "actor" in this case)
         # self.create_subscription(ModelStates, '/gazebo/model_states', self.actor_pose_callback, 10)
@@ -71,6 +78,7 @@ class DynamicUpdater(Node):
         # define the distance threshold for bounding force update
         self.diff_thres = 0.5 #m
         
+    
     def timer_callback(self):
         current_time = self.get_clock().now()
         dt = (current_time - self.pre_time).nanoseconds / 1e9  # Convert nanoseconds to seconds
@@ -96,8 +104,20 @@ class DynamicUpdater(Node):
         if self.robot_prev_pose is None:
             self.robot_prev_pose = self.robot_pose
             return
+        
+    def get_object_linear_vel(self, prev_pos, cur_pos, time_diff):
+        linear_velocity = Twist().linear
+        linear_velocity.x = (cur_pos.x - prev_pos.x) / time_diff
+        linear_velocity.y = (cur_pos.y - prev_pos.y) / time_diff
+        linear_velocity.z = (cur_pos.z - prev_pos.z) / time_diff
+        return linear_velocity
+    
+    # The object's anisotropic behavior function
+    def gamma_function(self, Lambda, cos_phi_ij):
+        return Lambda + 0.5 * (1 - Lambda) * (1 + cos_phi_ij)
 
     def object_position_callback(self, markers_msg):
+        current_time = time.time()
         if self.robot_pose is None:
             self.get_logger().warn('Waiting for odometry callback...')
             return
@@ -126,16 +146,42 @@ class DynamicUpdater(Node):
             self.F_bound = np.array([0, 0])    
         
         for marker in markers_msg.markers:
+            object_id = marker.id
+            current_position = marker.pose.position
+
+            if object_id in self.object_positions:
+                previous_position, previous_time = self.object_positions[object_id]
+
+                time_diff = current_time - previous_time
+                if time_diff > 0.0:
+                    # Calculate object linear velocity
+                    self.object_linear_vel = self.get_object_linear_vel(previous_position, current_position, time_diff)
+
+            self.object_positions[object_id] = (current_position, current_time)
+            
+            # Reset to intial values of the related forces
+            self.F_des = np.array([0, 0])
+            self.F_soc = np.array([0, 0])
+            
             if marker is not None:
                 self.get_logger().info('Marker detected !!!')
+                # Compute the linear velocity of the robot relative to the object
+                vec_relative_vel = np.array([self.robot_velocity.linear.x - self.object_linear_vel.x, self.robot_velocity.linear.y - self.object_linear_vel.y])
+                
                 # Compute the vectorized distance between the robot and the object
                 vec_dis = np.array([-marker.pose.position.x + self.robot_pose.x, -marker.pose.position.y + self.robot_pose.y])
+                
+                # Encounter angle's cosine calculation
+                cos_phi_ij = (vec_relative_vel / np.linalg.norm(vec_relative_vel)) * (-vec_dis / np.linalg.norm(vec_dis))
+                
+                # Compute the object's anisotropic behavior
+                Gamma = self.gamma_function(self.Lambda, cos_phi_ij)
                 
                 # Compute the distance between the robot and the object
                 distance = math.sqrt((marker.pose.position.x - self.robot_pose.x)**2 + (marker.pose.position.y - self.robot_pose.y)**2)
                                               
                 # Compute the social force applied to the mobile robot
-                self.F_soc = self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance) 
+                self.F_soc = Gamma * self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance) 
                 
                 # Current velocities of the mobile robot
                 self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
@@ -146,10 +192,11 @@ class DynamicUpdater(Node):
                 
                 # Compute the designated force applied to the mobile robot
                 F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
+                self.F_des = F_des
                 print(self.v_des)
                 
             # Total force applied to the mobile robot
-            self.F_total = F_des + self.F_soc + self.F_bound
+            self.F_total = self.F_des + self.F_soc + self.F_bound
 
             # Create and publish the force message
             force_msg = Float32MultiArray()
