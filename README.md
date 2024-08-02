@@ -3,7 +3,7 @@
 Maintainer: <hongsonnguyen.haui@gmail.com>
 ---------------------------------------------------------------
 
-(https://github.com/sontypo/Social-Robot-Implementation/blob/master/simulation_program_august2.mp4)
+(https://raw.githubusercontent.com/sontypo/Social-Robot-Implementation/blob/master/simulation_program_august2.mp4)
 
 ## Requirement
 - OS: Ubuntu 20.04 or later version
