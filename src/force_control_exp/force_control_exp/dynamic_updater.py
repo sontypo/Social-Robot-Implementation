@@ -13,7 +13,7 @@ import time
 
 class DynamicUpdater(Node):
     def __init__(self):
-        super().__init__('dynamic_updater')
+        super().__init__('dynamic_updater') # type: ignore
         self.robot_pose = Point()
         self.robot_velocity = Twist()
         self.object_linear_vel = Twist().linear
@@ -26,10 +26,10 @@ class DynamicUpdater(Node):
         # self.I_b = 1/12 * m_base * (0.26*0.26 + 0.13*0.13 + 0.605*0.605)  # 0.416 + 0.8
         self.I_b = 1.216
         self.d2origin = 0.2 #m
-        self.tau_d = 0.2953125
+        self.tau_d = 2.953125    # original: 0.2953125 - it was Ali's params
         self.v_max_robot = 2.5
         # designated velocity 
-        self.sigma = 3.0    # for computing new v_des
+        self.sigma = 38.8623    # for computing new v_des
         # self.v_des = np.array([self.v_max_robot, 0])      # this one is for the previous version
         self.v_des = np.array([0, 0])   # new version of v_des for computing F_des
         self.F_des = np.array([0, 0])
@@ -44,12 +44,10 @@ class DynamicUpdater(Node):
         self.beta = 1.806738
         
         # Added boundary force's terms
-        self.F_bound_R = None
-        self.F_bound_L = None
         self.F_bound = np.array([0, 0])
         self.boundary_dis = 2.5
-        self.alpha_bound = 15
-        self.beta_bound = 0.25
+        self.alpha_bound = 100
+        self.beta_bound = 3.5
 
         # Subscriber for the robot's position 
         self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
@@ -76,7 +74,7 @@ class DynamicUpdater(Node):
         # define the previous robot position
         self.robot_prev_pose = None
         # define the distance threshold for bounding force update
-        self.diff_thres = 0.5 #m
+        self.diff_thres = 0.25 #m
         
     
     def timer_callback(self):
@@ -127,23 +125,26 @@ class DynamicUpdater(Node):
             return
         
         pose_diff = math.sqrt((self.robot_prev_pose.x - self.robot_pose.x)**2 + (self.robot_prev_pose.y - self.robot_pose.y)**2)
-        # Compute the boundary forces applied to the mobile robot
+        # Compute the boundary force applied to the mobile robot
         if pose_diff >= self.diff_thres:
             ''' Assume that the mobile robot is always tends to be positioned at the center of the hallway, which is the intial position of it.
-                The boundary forces applied to the robot are from both sides, the distance between it and the wall is determined as: d2bound_L & d2bound_R '''
-            d2bound_L = (self.boundary_dis / 2) - self.robot_pose.y
-            d2bound_R = (self.boundary_dis / 2) - (-self.robot_pose.y)
-            # Compute the boundary forces from both sides
-            self.F_bound_L = np.array( [self.alpha_bound * math.exp(-d2bound_L / self.beta_bound) * math.sin(self.theta), \
-                                        self.alpha_bound * math.exp(-d2bound_L / self.beta_bound) * math.cos(self.theta)] )
-            self.F_bound_R = np.array( [self.alpha_bound * math.exp(-d2bound_R / self.beta_bound) * math.sin(self.theta), \
-                                        self.alpha_bound * math.exp(-d2bound_R / self.beta_bound) * math.cos(self.theta)] )
-            # Total boundary force
-            self.F_bound = self.F_bound_R - self.F_bound_L
+                The boundary force applied to the robot depends on the changes in position of the robot along the y-axis '''
+            # The boundary force
+            # theta in F_bound's term is zero due to the fact that boundary forces are only affected along the y-axis
+            if self.robot_pose.y > 0:
+                self.F_bound = - np.array( [self.alpha_bound * math.exp(- self.robot_pose.y / self.beta_bound) * math.sin(0), \
+                                        self.alpha_bound * math.exp(- self.robot_pose.y / self.beta_bound) * math.cos(0)] )
+            elif self.robot_pose.y < 0:
+                self.F_bound = np.array( [self.alpha_bound * math.exp(- abs(self.robot_pose.y) / self.beta_bound) * math.sin(0), \
+                                        self.alpha_bound * math.exp(- self.robot_pose.y / self.beta_bound) * math.cos(0)] )
             # Update robot position
             self.robot_prev_pose = self.robot_pose
         else: 
             self.F_bound = np.array([0, 0])    
+        
+        print("--------------------------------")
+        print("Pose different: ", pose_diff)
+        print("F_bound: ", self.F_bound)
         
         for marker in markers_msg.markers:
             object_id = marker.id
@@ -183,27 +184,29 @@ class DynamicUpdater(Node):
                 # Compute the social force applied to the mobile robot
                 self.F_soc = Gamma * self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance) 
                 
-                # Current velocities of the mobile robot
-                self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
+        # Current velocities of the mobile robot
+        self.v_cur = np.array([self.robot_velocity.linear.x, self.robot_velocity.linear.y])
                 
-                # Designed velocity of the mobile robot
-                s_ = np.linalg.norm(self.F_soc) + np.linalg.norm(self.F_bound)
-                self.v_des = math.exp( -s_ / self.sigma ) * self.v_max_robot
-                
-                # Compute the designated force applied to the mobile robot
-                F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
-                self.F_des = F_des
-                print(self.v_des)
-                
-            # Total force applied to the mobile robot
-            self.F_total = self.F_des + self.F_soc + self.F_bound
+        # Designed velocity of the mobile robot
+        s_ = np.linalg.norm(self.F_soc) + np.linalg.norm(self.F_bound)
+        self.v_des = math.exp( -s_ / self.sigma ) * np.array([self.v_max_robot, 0])
+        
+        # Compute the designated force applied to the mobile robot
+        F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
+        self.F_des = F_des
+        print("v_des: ", self.v_des)
+        print("F_des: ", self.F_des)
+        print("F_soc: ", self.F_soc)
+            
+        # Total force applied to the mobile robot
+        self.F_total = self.F_des + self.F_soc + self.F_bound
 
-            # Create and publish the force message
-            force_msg = Float32MultiArray()
-            force_msg.data.append(self.F_total[0])
-            force_msg.data.append(self.F_total[1])
-            self.force_publisher.publish(force_msg)
-            # self.get_logger().info(f'Fm: {self.F_total[0]} | Fn: {self.F_total[1]}')
+        # Create and publish the force message
+        force_msg = Float32MultiArray()
+        force_msg.data.append(self.F_total[0])
+        force_msg.data.append(self.F_total[1])
+        self.force_publisher.publish(force_msg)
+        # self.get_logger().info(f'Fm: {self.F_total[0]} | Fn: {self.F_total[1]}')
                             
             
     # def actor_pose_callback(self, actor):
