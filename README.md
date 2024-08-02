@@ -3,6 +3,10 @@
 Maintainer: <hongsonnguyen.haui@gmail.com>
 ---------------------------------------------------------------
 
+<video width="320" height="240" control>
+  <source src="simulation_program_august2.mp4" type="video/mp4">
+</video>
+
 ## Requirement
 - OS: Ubuntu 20.04 or later version
 - Environment: ROS2, Gazebo classic
