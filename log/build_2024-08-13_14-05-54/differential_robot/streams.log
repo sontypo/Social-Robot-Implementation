@@ -1,0 +1,73 @@
+[1.589s] Invoking command in '/home/saun/ctrl_mr_dynamic/src/differential_robot': PYTHONPATH=/home/saun/ctrl_mr_dynamic/build/differential_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/differential_robot build --build-base /home/saun/ctrl_mr_dynamic/build/differential_robot/build install --record /home/saun/ctrl_mr_dynamic/build/differential_robot/install.log --single-version-externally-managed install_data
+[4.378s] running egg_info
+[4.378s] creating ../../build/differential_robot/differential_robot.egg-info
+[4.378s] writing ../../build/differential_robot/differential_robot.egg-info/PKG-INFO
+[4.378s] writing dependency_links to ../../build/differential_robot/differential_robot.egg-info/dependency_links.txt
+[4.378s] writing entry points to ../../build/differential_robot/differential_robot.egg-info/entry_points.txt
+[4.378s] writing requirements to ../../build/differential_robot/differential_robot.egg-info/requires.txt
+[4.378s] writing top-level names to ../../build/differential_robot/differential_robot.egg-info/top_level.txt
+[4.378s] writing manifest file '../../build/differential_robot/differential_robot.egg-info/SOURCES.txt'
+[4.379s] reading manifest file '../../build/differential_robot/differential_robot.egg-info/SOURCES.txt'
+[4.379s] writing manifest file '../../build/differential_robot/differential_robot.egg-info/SOURCES.txt'
+[4.379s] running build
+[4.379s] running build_py
+[4.379s] creating /home/saun/ctrl_mr_dynamic/build/differential_robot/build
+[4.379s] creating /home/saun/ctrl_mr_dynamic/build/differential_robot/build/lib
+[4.379s] creating /home/saun/ctrl_mr_dynamic/build/differential_robot/build/lib/differential_robot
+[4.379s] copying differential_robot/__init__.py -> /home/saun/ctrl_mr_dynamic/build/differential_robot/build/lib/differential_robot
+[4.380s] running install
+[4.380s] running install_lib
+[4.380s] creating /home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages/differential_robot
+[4.380s] copying /home/saun/ctrl_mr_dynamic/build/differential_robot/build/lib/differential_robot/__init__.py -> /home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages/differential_robot
+[4.380s] byte-compiling /home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages/differential_robot/__init__.py to __init__.cpython-310.pyc
+[4.380s] running install_data
+[4.380s] creating /home/saun/ctrl_mr_dynamic/install/differential_robot/share/ament_index
+[4.380s] creating /home/saun/ctrl_mr_dynamic/install/differential_robot/share/ament_index/resource_index
+[4.380s] creating /home/saun/ctrl_mr_dynamic/install/differential_robot/share/ament_index/resource_index/packages
+[4.385s] copying resource/differential_robot -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/ament_index/resource_index/packages
+[4.385s] copying package.xml -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot
+[4.385s] creating /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/launch
+[4.385s] copying launch/example.launch.py -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/launch
+[4.385s] copying launch/classic_spawn_diffbot.launch.py -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/launch
+[4.385s] copying launch/spawn_diffbot.launch.xml -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/launch
+[4.385s] copying launch/spawn_diffbot.launch.py -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/launch
+[4.386s] creating /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.386s] copying models/HDL32E_base.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.386s] copying models/r200.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.386s] copying models/hokuyo.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.386s] copying models/VLP16_scan.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.386s] copying models/astra.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.386s] copying models/diffbot_irl.sdf -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.386s] copying models/base_link.STL -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.386s] copying models/VLP16_base_2.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.387s] copying models/simple_hallway.sdf -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.387s] copying models/kinectv2.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.400s] copying models/HDL32E_scan.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.400s] copying models/VLP16_base_1.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.400s] copying models/VLP16_scan.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.400s] copying models/HDL32E_scan.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.400s] copying models/HDL32E_base.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.401s] copying models/VLP16_base_1.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.401s] copying models/simplebot.sdf -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.401s] copying models/kinectv2.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.401s] copying models/lds.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.401s] copying models/kinectv2_nobase.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.401s] copying models/left_tire.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.401s] copying models/right_tire.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.402s] copying models/VLP16_base_2.stl -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.403s] copying models/empty.sdf -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.403s] copying models/diffbot_realsize.urdf -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.403s] copying models/cover_link.STL -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.403s] copying models/kinectv2_nobase.dae -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models
+[4.404s] creating /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/urdf
+[4.404s] copying urdf/diffbot_realsize.urdf -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/urdf
+[4.404s] copying urdf/diffbot_classic_gazebo.urdf -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/urdf
+[4.404s] creating /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/worlds
+[4.404s] copying worlds/empty_world.world -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/worlds
+[4.404s] copying worlds/single_actor.world -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/worlds
+[4.406s] copying worlds/simple_hallway.world -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/worlds
+[4.406s] running install_egg_info
+[4.407s] Copying ../../build/differential_robot/differential_robot.egg-info to /home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages/differential_robot-0.0.0-py3.10.egg-info
+[4.408s] running install_scripts
+[4.408s] writing list of installed files to '/home/saun/ctrl_mr_dynamic/build/differential_robot/install.log'
+[4.418s] Invoked command in '/home/saun/ctrl_mr_dynamic/src/differential_robot' returned '0': PYTHONPATH=/home/saun/ctrl_mr_dynamic/build/differential_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/differential_robot build --build-base /home/saun/ctrl_mr_dynamic/build/differential_robot/build install --record /home/saun/ctrl_mr_dynamic/build/differential_robot/install.log --single-version-externally-managed install_data

@@ -1,0 +1,4 @@
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/pid_control': /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pid_control -- -j8 -l8
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/pid_control' returned '0': /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pid_control -- -j8 -l8
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/pid_control': /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pid_control
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/pid_control' returned '0': /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pid_control

@@ -27,7 +27,7 @@ def generate_launch_description():
     world = os.path.join(
         pkg_share,
         'worlds',
-        'single_actor.world'
+        'hallway.world'
     )
 
     # gzserver_cmd = IncludeLaunchDescription(
@@ -44,7 +44,13 @@ def generate_launch_description():
     # )
 
     robot_state_publisher = Node(
-        package='robot_state_publisher',
+        package='robot_state_publisher',# The code snippet you provided is creating a Node in a ROS2
+        # launch file. Here is what each part of the Node definition
+        # is doing:
+        # The code snippet you provided is creating a Node in a ROS2
+        # launch file. Here is what each part of the Node definition
+        # is doing:
+        
         executable='robot_state_publisher',
         name='robot_state_publisher',
         output='screen',
@@ -67,14 +73,14 @@ def generate_launch_description():
     x_pose = LaunchConfiguration('x_pose', default='0.0')
     y_pose = LaunchConfiguration('y_pose', default='0.0')
 
-    # Declare the launch arguments
-    declare_x_position_cmd = DeclareLaunchArgument(
-        'x_pose', default_value='0.0',
-        description='Specify namespace of the robot')
+    # # Declare the launch arguments
+    # declare_x_position_cmd = DeclareLaunchArgument(
+    #     'x_pose', default_value='0.0',
+    #     description='Specify namespace of the robot')
 
-    declare_y_position_cmd = DeclareLaunchArgument(
-        'y_pose', default_value='0.0',
-        description='Specify namespace of the robot')
+    # declare_y_position_cmd = DeclareLaunchArgument(
+    #     'y_pose', default_value='0.0',
+    #     description='Specify namespace of the robot')
 
     start_gazebo_ros_spawner_cmd = Node(
         package='gazebo_ros',
@@ -105,7 +111,7 @@ def generate_launch_description():
     # ld.add_action(gzclient_cmd)
     ld.add_action(robot_state_publisher)
     ld.add_action(start_joint_state_publisher_cmd)
-    ld.add_action(spawn_joint_state_broadcaster)
+    # ld.add_action(spawn_joint_state_broadcaster)
     ld.add_action(start_gazebo_ros_spawner_cmd)
     ld.add_action(gazebo)
     

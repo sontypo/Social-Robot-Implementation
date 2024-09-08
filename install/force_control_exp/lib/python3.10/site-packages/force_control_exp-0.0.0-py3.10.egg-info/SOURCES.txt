@@ -11,6 +11,7 @@ setup.py
 ../../build/force_control_exp/force_control_exp.egg-info/zip-safe
 force_control_exp/__init__.py
 force_control_exp/dynamic_updater.py
+force_control_exp/getScan.py
 resource/force_control_exp
 test/test_copyright.py
 test/test_flake8.py

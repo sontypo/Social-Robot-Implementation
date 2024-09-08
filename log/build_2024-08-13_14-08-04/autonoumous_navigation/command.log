@@ -1,0 +1,4 @@
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/autonoumous_navigation': /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/autonoumous_navigation -- -j8 -l8
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/autonoumous_navigation' returned '0': /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/autonoumous_navigation -- -j8 -l8
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/autonoumous_navigation': /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/autonoumous_navigation
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/autonoumous_navigation' returned '0': /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/autonoumous_navigation

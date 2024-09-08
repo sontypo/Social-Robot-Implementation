@@ -1,0 +1,44 @@
+[0.044s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/visual_control_v1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/visual_control_v1 -- -j8 -l8
+[0.151s] Built target ament_cmake_python_copy_visual_control_v1
+[0.552s] running egg_info
+[0.553s] writing visual_control_v1.egg-info/PKG-INFO
+[0.554s] writing dependency_links to visual_control_v1.egg-info/dependency_links.txt
+[0.554s] writing top-level names to visual_control_v1.egg-info/top_level.txt
+[0.557s] reading manifest file 'visual_control_v1.egg-info/SOURCES.txt'
+[0.558s] writing manifest file 'visual_control_v1.egg-info/SOURCES.txt'
+[0.592s] Built target ament_cmake_python_build_visual_control_v1_egg
+[0.608s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/visual_control_v1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/visual_control_v1 -- -j8 -l8
+[0.644s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/visual_control_v1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/visual_control_v1
+[0.654s] -- Install configuration: ""
+[0.654s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/environment/pythonpath.sh
+[0.654s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/environment/pythonpath.dsv
+[0.654s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/local/lib/python3.10/dist-packages/visual_control_v1-1.0.0-py3.10.egg-info
+[0.654s] -- Installing: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/local/lib/python3.10/dist-packages/visual_control_v1-1.0.0-py3.10.egg-info/dependency_links.txt
+[0.654s] -- Installing: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/local/lib/python3.10/dist-packages/visual_control_v1-1.0.0-py3.10.egg-info/top_level.txt
+[0.654s] -- Installing: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/local/lib/python3.10/dist-packages/visual_control_v1-1.0.0-py3.10.egg-info/SOURCES.txt
+[0.654s] -- Installing: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/local/lib/python3.10/dist-packages/visual_control_v1-1.0.0-py3.10.egg-info/PKG-INFO
+[0.655s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/local/lib/python3.10/dist-packages/visual_control_v1
+[0.655s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/local/lib/python3.10/dist-packages/visual_control_v1/__init__.py
+[0.706s] Listing '/home/saun/ctrl_mr_dynamic/install/visual_control_v1/local/lib/python3.10/dist-packages/visual_control_v1'...
+[0.712s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/lib/visual_control_v1/irobot_PID.py
+[0.713s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/lib/visual_control_v1/irobot_PID.launch.py
+[0.713s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/launch
+[0.713s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/launch/irobot_PID.launch.py
+[0.713s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/config
+[0.714s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/config/params.yaml
+[0.714s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/ament_index/resource_index/package_run_dependencies/visual_control_v1
+[0.714s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/ament_index/resource_index/parent_prefix_path/visual_control_v1
+[0.714s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/environment/ament_prefix_path.sh
+[0.714s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/environment/ament_prefix_path.dsv
+[0.714s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/environment/path.sh
+[0.715s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/environment/path.dsv
+[0.715s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/local_setup.bash
+[0.715s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/local_setup.sh
+[0.715s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/local_setup.zsh
+[0.715s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/local_setup.dsv
+[0.715s] -- Installing: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/package.dsv
+[0.715s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/ament_index/resource_index/packages/visual_control_v1
+[0.715s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/cmake/visual_control_v1Config.cmake
+[0.716s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/cmake/visual_control_v1Config-version.cmake
+[0.716s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/visual_control_v1/share/visual_control_v1/package.xml
+[0.718s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/visual_control_v1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/visual_control_v1

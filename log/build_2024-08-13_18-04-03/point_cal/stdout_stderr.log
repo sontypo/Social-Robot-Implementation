@@ -1,0 +1,36 @@
+Built target ament_cmake_python_copy_point_cal
+Traceback (most recent call last):
+  File "/home/saun/ctrl_mr_dynamic/build/point_cal/ament_cmake_python/point_cal/setup.py", line 1, in <module>
+    from setuptools import find_packages
+  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+    import setuptools.version
+  File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+    import pkg_resources
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 33, in <module>
+    import email.parser
+  File "/usr/lib/python3.10/email/parser.py", line 12, in <module>
+    from email.feedparser import FeedParser, BytesFeedParser
+  File "/usr/lib/python3.10/email/feedparser.py", line 27, in <module>
+    from email._policybase import compat32
+  File "/usr/lib/python3.10/email/_policybase.py", line 7, in <module>
+    from email import header
+  File "/usr/lib/python3.10/email/header.py", line 35, in <module>
+    ecre = re.compile(r'''
+  File "/usr/lib/python3.10/re.py", line 251, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 526, in _parse
+    code = _escape(source, this, state)
+  File "/usr/lib/python3.10/sre_parse.py", line 425, in _escape
+    if len(escape) == 2:
+KeyboardInterrupt
+gmake[2]: *** [CMakeFiles/ament_cmake_python_build_point_cal_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_point_cal_egg] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/ament_cmake_python_build_point_cal_egg.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

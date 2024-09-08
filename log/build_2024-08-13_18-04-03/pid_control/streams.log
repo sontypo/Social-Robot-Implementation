@@ -1,0 +1,47 @@
+[0.708s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/pid_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pid_control -- -j8 -l8
+[0.825s] Built target ament_cmake_python_copy_pid_control
+[1.047s] Traceback (most recent call last):
+[1.048s]   File "/home/saun/ctrl_mr_dynamic/build/pid_control/ament_cmake_python/pid_control/setup.py", line 1, in <module>
+[1.053s]     from setuptools import find_packages
+[1.054s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+[1.054s]     import setuptools.version
+[1.054s]   File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+[1.054s]     import pkg_resources
+[1.055s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 78, in <module>
+[1.056s]     __import__('pkg_resources.extern.packaging.requirements')
+[1.056s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/requirements.py", line 10, in <module>
+[1.056s]     from pkg_resources.extern.pyparsing import (  # noqa
+[1.056s]   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+[1.056s]   File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+[1.056s]   File "<frozen importlib._bootstrap>", line 674, in _load_unlocked
+[1.057s]   File "<frozen importlib._bootstrap>", line 571, in module_from_spec
+[1.057s]   File "/usr/lib/python3/dist-packages/pkg_resources/extern/__init__.py", line 52, in create_module
+[1.064s]     return self.load_module(spec.name)
+[1.064s]   File "/usr/lib/python3/dist-packages/pkg_resources/extern/__init__.py", line 37, in load_module
+[1.064s]     __import__(extant)
+[1.064s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 5155, in <module>
+[1.071s]     unicodeString = Combine(_L('u') + quotedString.copy()).setName("unicode string literal")
+[1.071s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 4255, in __init__
+[1.074s]     self.leaveWhitespace()
+[1.074s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 3747, in leaveWhitespace
+[1.078s]     self.expr.leaveWhitespace()
+[1.078s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 3294, in leaveWhitespace
+[1.078s]     e.leaveWhitespace()
+[1.078s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 3747, in leaveWhitespace
+[1.078s]     self.expr.leaveWhitespace()
+[1.079s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 3294, in leaveWhitespace
+[1.079s]     e.leaveWhitespace()
+[1.080s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 3292, in leaveWhitespace
+[1.081s]     self.exprs = [ e.copy() for e in self.exprs ]
+[1.081s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 3292, in <listcomp>
+[1.081s]     self.exprs = [ e.copy() for e in self.exprs ]
+[1.082s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/pyparsing.py", line 1183, in copy
+[1.083s]     cpy = copy.copy( self )
+[1.083s]   File "/usr/lib/python3.10/copy.py", line 102, in copy
+[1.083s]     return _reconstruct(x, None, *rv)
+[1.083s]   File "/usr/lib/python3.10/copy.py", line 270, in _reconstruct
+[1.083s]     if deep:
+[1.083s] KeyboardInterrupt
+[1.089s] gmake[2]: *** [CMakeFiles/ament_cmake_python_build_pid_control_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_pid_control_egg] Interrupt
+[1.089s] gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/ament_cmake_python_build_pid_control_egg.dir/all] Interrupt
+[1.089s] gmake: *** [Makefile:146: all] Interrupt

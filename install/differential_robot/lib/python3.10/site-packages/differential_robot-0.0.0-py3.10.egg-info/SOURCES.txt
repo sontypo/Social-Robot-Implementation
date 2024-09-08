@@ -38,6 +38,7 @@ models/lds.stl
 models/left_tire.stl
 models/r200.dae
 models/right_tire.stl
+models/simple_hallway.sdf
 models/simplebot.sdf
 resource/differential_robot
 test/test_copyright.py
@@ -46,4 +47,6 @@ test/test_pep257.py
 urdf/diffbot_classic_gazebo.urdf
 urdf/diffbot_realsize.urdf
 worlds/empty_world.world
+worlds/hallway.world
+worlds/simple_hallway.world
 worlds/single_actor.world

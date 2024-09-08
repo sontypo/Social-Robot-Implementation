@@ -1,0 +1,4 @@
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect': /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/obstacle_detect -- -j8 -l8
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect' returned '0': /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/obstacle_detect -- -j8 -l8
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect': /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/obstacle_detect
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect' returned '0': /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/obstacle_detect

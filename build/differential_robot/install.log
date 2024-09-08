@@ -14,6 +14,7 @@
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models/diffbot_irl.sdf
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models/base_link.STL
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models/VLP16_base_2.dae
+/home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models/simple_hallway.sdf
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models/kinectv2.stl
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models/HDL32E_scan.stl
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models/VLP16_base_1.stl
@@ -34,8 +35,10 @@
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/models/kinectv2_nobase.dae
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/urdf/diffbot_realsize.urdf
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/urdf/diffbot_classic_gazebo.urdf
+/home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/worlds/hallway.world
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/worlds/empty_world.world
 /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/worlds/single_actor.world
+/home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/worlds/simple_hallway.world
 /home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages/differential_robot-0.0.0-py3.10.egg-info/dependency_links.txt
 /home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages/differential_robot-0.0.0-py3.10.egg-info/top_level.txt
 /home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages/differential_robot-0.0.0-py3.10.egg-info/SOURCES.txt

@@ -1,0 +1,21 @@
+[2.941s] Invoking command in '/home/saun/ctrl_mr_dynamic/src/differential_robot': PYTHONPATH=/home/saun/ctrl_mr_dynamic/build/differential_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/differential_robot build --build-base /home/saun/ctrl_mr_dynamic/build/differential_robot/build install --record /home/saun/ctrl_mr_dynamic/build/differential_robot/install.log --single-version-externally-managed install_data
+[3.782s] running egg_info
+[3.785s] writing ../../build/differential_robot/differential_robot.egg-info/PKG-INFO
+[3.788s] writing dependency_links to ../../build/differential_robot/differential_robot.egg-info/dependency_links.txt
+[3.788s] writing entry points to ../../build/differential_robot/differential_robot.egg-info/entry_points.txt
+[3.788s] writing requirements to ../../build/differential_robot/differential_robot.egg-info/requires.txt
+[3.788s] writing top-level names to ../../build/differential_robot/differential_robot.egg-info/top_level.txt
+[3.791s] reading manifest file '../../build/differential_robot/differential_robot.egg-info/SOURCES.txt'
+[3.794s] writing manifest file '../../build/differential_robot/differential_robot.egg-info/SOURCES.txt'
+[3.795s] running build
+[3.795s] running build_py
+[3.795s] running install
+[3.800s] running install_lib
+[3.802s] running install_data
+[3.804s] copying launch/classic_spawn_diffbot.launch.py -> /home/saun/ctrl_mr_dynamic/install/differential_robot/share/differential_robot/launch
+[3.805s] running install_egg_info
+[3.808s] removing '/home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages/differential_robot-0.0.0-py3.10.egg-info' (and everything under it)
+[3.809s] Copying ../../build/differential_robot/differential_robot.egg-info to /home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages/differential_robot-0.0.0-py3.10.egg-info
+[3.811s] running install_scripts
+[3.863s] writing list of installed files to '/home/saun/ctrl_mr_dynamic/build/differential_robot/install.log'
+[3.914s] Invoked command in '/home/saun/ctrl_mr_dynamic/src/differential_robot' returned '0': PYTHONPATH=/home/saun/ctrl_mr_dynamic/build/differential_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saun/ctrl_mr_dynamic/install/differential_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/differential_robot build --build-base /home/saun/ctrl_mr_dynamic/build/differential_robot/build install --record /home/saun/ctrl_mr_dynamic/build/differential_robot/install.log --single-version-externally-managed install_data

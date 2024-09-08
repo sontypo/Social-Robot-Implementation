@@ -530,19 +530,19 @@
     <turnGravityOff>true</turnGravityOff>
     <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0.31 0.0 0.21 0 0 0</pose>
-      <visualize>true</visualize>
+      <visualize>false</visualize>
       <update_rate>30</update_rate>
       <always_on>1</always_on>
       <ray>
         <scan>
           <horizontal>
             <!-- <samples>180</samples> -->
-            <samples>20</samples>
+            <samples>720</samples>
             <resolution>1</resolution>
-            <min_angle>-1.570796</min_angle>
-            <max_angle>1.570796</max_angle>
             <!-- <min_angle>-1.570796</min_angle>
             <max_angle>1.570796</max_angle> -->
+            <min_angle>-3.1415926535897931</min_angle>
+            <max_angle>3.1415926535897931</max_angle>
           </horizontal>
         </scan>
         <range>
@@ -597,15 +597,9 @@
   <joint name="scan_joint" type="fixed">
     <parent link="base_link"/>
     <child link="Hokuyo_link"/>
-    <origin xyz="0.31 0 0.21" rpy="0 0 0"/>
+    <!-- <origin xyz="0.31 0 0.21" rpy="0 0 0"/> -->
+    <origin xyz="0.0 0 0.38" rpy="0 0 0"/>
   </joint>
-
-  <!-- <joint name="hokuyo_joint" type="fixed">
-    <axis xyz="0 0 1" />
-    <origin xyz="0 0.22 0.05" rpy="0 0 1.570796"/>
-    <parent link="base_link"/>
-    <child link="Hokuyo_link"/>
-  </joint> -->
 
 
   <!-- right wheel -->

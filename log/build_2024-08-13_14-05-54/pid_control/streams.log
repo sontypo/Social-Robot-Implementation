@@ -1,0 +1,95 @@
+[0.702s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/pid_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake /home/saun/ctrl_mr_dynamic/src/project/object_tracking/pid_control -DCMAKE_INSTALL_PREFIX=/home/saun/ctrl_mr_dynamic/install/pid_control
+[0.827s] -- The C compiler identification is GNU 11.4.0
+[0.968s] -- The CXX compiler identification is GNU 11.4.0
+[0.982s] -- Detecting C compiler ABI info
+[1.139s] -- Detecting C compiler ABI info - done
+[1.165s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.169s] -- Detecting C compile features
+[1.169s] -- Detecting C compile features - done
+[1.172s] -- Detecting CXX compiler ABI info
+[1.354s] -- Detecting CXX compiler ABI info - done
+[1.376s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.377s] -- Detecting CXX compile features
+[1.377s] -- Detecting CXX compile features - done
+[1.381s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.715s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.897s] -- Found rclpy: 3.3.13 (/opt/ros/humble/share/rclpy/cmake)
+[1.900s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[1.991s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.007s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.023s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.057s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.104s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.262s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.270s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.438s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.491s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.573s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.589s] -- Looking for pthread.h
+[2.720s] -- Looking for pthread.h - found
+[2.721s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.865s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.866s] -- Found Threads: TRUE  
+[3.146s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[3.205s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[3.368s] -- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)
+[4.121s] -- Found rviz2: 11.2.12 (/opt/ros/humble/share/rviz2/cmake)
+[4.123s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[4.288s] -- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+[4.581s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.792s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.794s] -- Added test 'lint_cmake' to check CMake code style
+[4.795s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.798s] -- Added test 'xmllint' to check XML markup files
+[4.805s] -- Configuring done
+[4.814s] -- Generating done
+[4.818s] -- Build files have been written to: /home/saun/ctrl_mr_dynamic/build/pid_control
+[5.056s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/pid_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake /home/saun/ctrl_mr_dynamic/src/project/object_tracking/pid_control -DCMAKE_INSTALL_PREFIX=/home/saun/ctrl_mr_dynamic/install/pid_control
+[5.057s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/pid_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pid_control -- -j8 -l8
+[5.207s] Built target ament_cmake_python_copy_pid_control
+[5.851s] running egg_info
+[5.853s] creating pid_control.egg-info
+[5.853s] writing pid_control.egg-info/PKG-INFO
+[5.854s] writing dependency_links to pid_control.egg-info/dependency_links.txt
+[5.854s] writing top-level names to pid_control.egg-info/top_level.txt
+[5.854s] writing manifest file 'pid_control.egg-info/SOURCES.txt'
+[5.858s] reading manifest file 'pid_control.egg-info/SOURCES.txt'
+[5.860s] writing manifest file 'pid_control.egg-info/SOURCES.txt'
+[5.928s] Built target ament_cmake_python_build_pid_control_egg
+[5.986s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/pid_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pid_control -- -j8 -l8
+[6.072s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/pid_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pid_control
+[6.193s] -- Install configuration: ""
+[6.194s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/environment/pythonpath.sh
+[6.194s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/environment/pythonpath.dsv
+[6.194s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/local/lib/python3.10/dist-packages/pid_control-1.0.0-py3.10.egg-info
+[6.194s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/local/lib/python3.10/dist-packages/pid_control-1.0.0-py3.10.egg-info/dependency_links.txt
+[6.194s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/local/lib/python3.10/dist-packages/pid_control-1.0.0-py3.10.egg-info/top_level.txt
+[6.194s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/local/lib/python3.10/dist-packages/pid_control-1.0.0-py3.10.egg-info/SOURCES.txt
+[6.194s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/local/lib/python3.10/dist-packages/pid_control-1.0.0-py3.10.egg-info/PKG-INFO
+[6.194s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/local/lib/python3.10/dist-packages/pid_control
+[6.194s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/local/lib/python3.10/dist-packages/pid_control/__init__.py
+[6.195s] Listing '/home/saun/ctrl_mr_dynamic/install/pid_control/local/lib/python3.10/dist-packages/pid_control'...
+[6.195s] Compiling '/home/saun/ctrl_mr_dynamic/install/pid_control/local/lib/python3.10/dist-packages/pid_control/__init__.py'...
+[6.195s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/lib/pid_control/pid_control.py
+[6.195s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/lib/pid_control/pid_control_origin.py
+[6.195s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/lib/pid_control/pid_control.launch.py
+[6.195s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/launch
+[6.195s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/launch/pid_control.launch.py
+[6.195s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/config
+[6.195s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/config/params.yaml
+[6.200s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/ament_index/resource_index/package_run_dependencies/pid_control
+[6.201s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/ament_index/resource_index/parent_prefix_path/pid_control
+[6.201s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/environment/ament_prefix_path.sh
+[6.201s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/environment/ament_prefix_path.dsv
+[6.201s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/environment/path.sh
+[6.201s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/environment/path.dsv
+[6.201s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/local_setup.bash
+[6.201s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/local_setup.sh
+[6.202s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/local_setup.zsh
+[6.202s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/local_setup.dsv
+[6.202s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/package.dsv
+[6.202s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/ament_index/resource_index/packages/pid_control
+[6.202s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/cmake/pid_controlConfig.cmake
+[6.202s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/cmake/pid_controlConfig-version.cmake
+[6.203s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pid_control/share/pid_control/package.xml
+[6.222s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/pid_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pid_control

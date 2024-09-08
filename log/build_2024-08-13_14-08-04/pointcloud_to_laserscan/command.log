@@ -1,0 +1,4 @@
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan': /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan -- -j8 -l8
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan' returned '0': /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan -- -j8 -l8
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan': /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan' returned '0': /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan
