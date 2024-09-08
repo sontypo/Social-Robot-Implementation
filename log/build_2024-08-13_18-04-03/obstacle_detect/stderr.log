@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/home/saun/ctrl_mr_dynamic/build/obstacle_detect/ament_cmake_python/obstacle_detect/setup.py", line 1, in <module>
+    from setuptools import find_packages
+  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+    import setuptools.version
+  File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+    import pkg_resources
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 76, in <module>
+    __import__('pkg_resources.extern.packaging.version')
+  File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/version.py", line 9, in <module>
+    from typing import Callable, Iterator, List, Optional, SupportsInt, Tuple, Union
+  File "/usr/lib/python3.10/typing.py", line 2603, in <module>
+    class BinaryIO(IO[bytes]):
+  File "/usr/lib/python3.10/typing.py", line 309, in inner
+    return cached(*args, **kwds)
+  File "/usr/lib/python3.10/typing.py", line 1346, in __class_getitem__
+    return _GenericAlias(cls, params,
+  File "/usr/lib/python3.10/typing.py", line 1025, in __init__
+    self.__parameters__ = _collect_type_vars(params, typevar_types=_typevar_types)
+  File "/usr/lib/python3.10/typing.py", line 987, in __setattr__
+    if _is_dunder(attr) or attr in {'_name', '_inst', '_nparams',
+  File "/usr/lib/python3.10/typing.py", line 936, in _is_dunder
+    return attr.startswith('__') and attr.endswith('__')
+KeyboardInterrupt
+gmake[2]: *** [CMakeFiles/ament_cmake_python_build_obstacle_detect_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_obstacle_detect_egg] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/ament_cmake_python_build_obstacle_detect_egg.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

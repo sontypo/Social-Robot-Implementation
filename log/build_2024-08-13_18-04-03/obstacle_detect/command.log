@@ -1,0 +1,1 @@
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/obstacle_detect -- -j8 -l8

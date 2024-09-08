@@ -1,4 +1,0 @@
-source;share/run_sensor/local_setup.bash
-source;share/run_sensor/local_setup.dsv
-source;share/run_sensor/local_setup.sh
-source;share/run_sensor/local_setup.zsh

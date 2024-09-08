@@ -1,0 +1,22 @@
+[1.833s] Invoking command in '/home/saun/ctrl_mr_dynamic/src/force_control_exp': PYTHONPATH=/home/saun/ctrl_mr_dynamic/build/force_control_exp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/force_control_exp build --build-base /home/saun/ctrl_mr_dynamic/build/force_control_exp/build install --record /home/saun/ctrl_mr_dynamic/build/force_control_exp/install.log --single-version-externally-managed install_data
+[2.302s] running egg_info
+[2.303s] writing ../../build/force_control_exp/force_control_exp.egg-info/PKG-INFO
+[2.303s] writing dependency_links to ../../build/force_control_exp/force_control_exp.egg-info/dependency_links.txt
+[2.303s] writing entry points to ../../build/force_control_exp/force_control_exp.egg-info/entry_points.txt
+[2.304s] writing requirements to ../../build/force_control_exp/force_control_exp.egg-info/requires.txt
+[2.304s] writing top-level names to ../../build/force_control_exp/force_control_exp.egg-info/top_level.txt
+[2.306s] reading manifest file '../../build/force_control_exp/force_control_exp.egg-info/SOURCES.txt'
+[2.307s] adding license file 'LICENSE'
+[2.308s] writing manifest file '../../build/force_control_exp/force_control_exp.egg-info/SOURCES.txt'
+[2.308s] running build
+[2.308s] running build_py
+[2.308s] running install
+[2.309s] running install_lib
+[2.311s] running install_data
+[2.311s] running install_egg_info
+[2.313s] removing '/home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/python3.10/site-packages/force_control_exp-0.0.0-py3.10.egg-info' (and everything under it)
+[2.314s] Copying ../../build/force_control_exp/force_control_exp.egg-info to /home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/python3.10/site-packages/force_control_exp-0.0.0-py3.10.egg-info
+[2.315s] running install_scripts
+[2.345s] Installing force_control_exp_node script to /home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/force_control_exp
+[2.345s] writing list of installed files to '/home/saun/ctrl_mr_dynamic/build/force_control_exp/install.log'
+[2.388s] Invoked command in '/home/saun/ctrl_mr_dynamic/src/force_control_exp' returned '0': PYTHONPATH=/home/saun/ctrl_mr_dynamic/build/force_control_exp/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/force_control_exp build --build-base /home/saun/ctrl_mr_dynamic/build/force_control_exp/build install --record /home/saun/ctrl_mr_dynamic/build/force_control_exp/install.log --single-version-externally-managed install_data

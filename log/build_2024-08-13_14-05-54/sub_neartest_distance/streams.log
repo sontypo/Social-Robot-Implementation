@@ -1,0 +1,94 @@
+[0.024s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/sub_neartest_distance': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake /home/saun/ctrl_mr_dynamic/src/project/autonoumous_navigation_pkg/sub_neartest_distance -DCMAKE_INSTALL_PREFIX=/home/saun/ctrl_mr_dynamic/install/sub_neartest_distance
+[0.163s] -- The C compiler identification is GNU 11.4.0
+[0.286s] -- The CXX compiler identification is GNU 11.4.0
+[0.303s] -- Detecting C compiler ABI info
+[0.508s] -- Detecting C compiler ABI info - done
+[0.541s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.547s] -- Detecting C compile features
+[0.548s] -- Detecting C compile features - done
+[0.557s] -- Detecting CXX compiler ABI info
+[0.795s] -- Detecting CXX compiler ABI info - done
+[0.819s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.821s] -- Detecting CXX compile features
+[0.823s] -- Detecting CXX compile features - done
+[0.833s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.195s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.424s] -- Found rclpy: 3.3.13 (/opt/ros/humble/share/rclpy/cmake)
+[1.427s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[1.514s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.532s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.556s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.594s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.646s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.830s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.838s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.062s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.114s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.186s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.217s] -- Looking for pthread.h
+[2.340s] -- Looking for pthread.h - found
+[2.340s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.475s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.478s] -- Found Threads: TRUE  
+[2.763s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.823s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.937s] -- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)
+[3.432s] -- Found rviz2: 11.2.12 (/opt/ros/humble/share/rviz2/cmake)
+[3.435s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[3.584s] -- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+[3.779s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.018s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.018s] -- Added test 'lint_cmake' to check CMake code style
+[4.020s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.022s] -- Added test 'xmllint' to check XML markup files
+[4.027s] -- Configuring done
+[4.042s] -- Generating done
+[4.047s] -- Build files have been written to: /home/saun/ctrl_mr_dynamic/build/sub_neartest_distance
+[4.062s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/sub_neartest_distance' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake /home/saun/ctrl_mr_dynamic/src/project/autonoumous_navigation_pkg/sub_neartest_distance -DCMAKE_INSTALL_PREFIX=/home/saun/ctrl_mr_dynamic/install/sub_neartest_distance
+[4.065s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/sub_neartest_distance': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/sub_neartest_distance -- -j8 -l8
+[4.200s] Built target ament_cmake_python_copy_sub_neartest_distance
+[4.749s] running egg_info
+[4.750s] creating sub_neartest_distance.egg-info
+[4.752s] writing sub_neartest_distance.egg-info/PKG-INFO
+[4.752s] writing dependency_links to sub_neartest_distance.egg-info/dependency_links.txt
+[4.753s] writing top-level names to sub_neartest_distance.egg-info/top_level.txt
+[4.753s] writing manifest file 'sub_neartest_distance.egg-info/SOURCES.txt'
+[4.757s] reading manifest file 'sub_neartest_distance.egg-info/SOURCES.txt'
+[4.759s] writing manifest file 'sub_neartest_distance.egg-info/SOURCES.txt'
+[4.814s] Built target ament_cmake_python_build_sub_neartest_distance_egg
+[4.836s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/sub_neartest_distance' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/sub_neartest_distance -- -j8 -l8
+[4.889s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/sub_neartest_distance': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/sub_neartest_distance
+[4.908s] -- Install configuration: ""
+[4.909s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/environment/pythonpath.sh
+[4.909s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/environment/pythonpath.dsv
+[4.909s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/local/lib/python3.10/dist-packages/sub_neartest_distance-1.0.0-py3.10.egg-info
+[4.909s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/local/lib/python3.10/dist-packages/sub_neartest_distance-1.0.0-py3.10.egg-info/dependency_links.txt
+[4.909s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/local/lib/python3.10/dist-packages/sub_neartest_distance-1.0.0-py3.10.egg-info/top_level.txt
+[4.910s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/local/lib/python3.10/dist-packages/sub_neartest_distance-1.0.0-py3.10.egg-info/SOURCES.txt
+[4.910s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/local/lib/python3.10/dist-packages/sub_neartest_distance-1.0.0-py3.10.egg-info/PKG-INFO
+[4.910s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/local/lib/python3.10/dist-packages/sub_neartest_distance
+[4.910s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/local/lib/python3.10/dist-packages/sub_neartest_distance/__init__.py
+[4.987s] Listing '/home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/local/lib/python3.10/dist-packages/sub_neartest_distance'...
+[4.987s] Compiling '/home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/local/lib/python3.10/dist-packages/sub_neartest_distance/__init__.py'...
+[4.996s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/lib/sub_neartest_distance/sub_neartest_distance.py
+[4.997s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/lib/sub_neartest_distance/sub_neartest_distance.launch.py
+[4.998s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/launch
+[4.998s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/launch/sub_neartest_distance.launch.py
+[4.999s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/config
+[4.999s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/config/params.yaml
+[4.999s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/ament_index/resource_index/package_run_dependencies/sub_neartest_distance
+[4.999s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/ament_index/resource_index/parent_prefix_path/sub_neartest_distance
+[4.999s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/environment/ament_prefix_path.sh
+[4.999s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/environment/ament_prefix_path.dsv
+[5.000s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/environment/path.sh
+[5.000s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/environment/path.dsv
+[5.001s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/local_setup.bash
+[5.001s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/local_setup.sh
+[5.003s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/local_setup.zsh
+[5.003s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/local_setup.dsv
+[5.003s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/package.dsv
+[5.003s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/ament_index/resource_index/packages/sub_neartest_distance
+[5.003s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/cmake/sub_neartest_distanceConfig.cmake
+[5.003s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/cmake/sub_neartest_distanceConfig-version.cmake
+[5.004s] -- Installing: /home/saun/ctrl_mr_dynamic/install/sub_neartest_distance/share/sub_neartest_distance/package.xml
+[5.015s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/sub_neartest_distance' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/sub_neartest_distance

@@ -1,0 +1,37 @@
+[0.705s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/point_cal': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/point_cal -- -j8 -l8
+[0.864s] Built target ament_cmake_python_copy_point_cal
+[1.035s] Traceback (most recent call last):
+[1.035s]   File "/home/saun/ctrl_mr_dynamic/build/point_cal/ament_cmake_python/point_cal/setup.py", line 1, in <module>
+[1.036s]     from setuptools import find_packages
+[1.036s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+[1.049s]     import setuptools.version
+[1.049s]   File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+[1.049s]     import pkg_resources
+[1.049s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 33, in <module>
+[1.049s]     import email.parser
+[1.049s]   File "/usr/lib/python3.10/email/parser.py", line 12, in <module>
+[1.049s]     from email.feedparser import FeedParser, BytesFeedParser
+[1.049s]   File "/usr/lib/python3.10/email/feedparser.py", line 27, in <module>
+[1.051s]     from email._policybase import compat32
+[1.051s]   File "/usr/lib/python3.10/email/_policybase.py", line 7, in <module>
+[1.051s]     from email import header
+[1.051s]   File "/usr/lib/python3.10/email/header.py", line 35, in <module>
+[1.059s]     ecre = re.compile(r'''
+[1.061s]   File "/usr/lib/python3.10/re.py", line 251, in compile
+[1.062s]     return _compile(pattern, flags)
+[1.065s]   File "/usr/lib/python3.10/re.py", line 303, in _compile
+[1.066s]     p = sre_compile.compile(pattern, flags)
+[1.066s]   File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+[1.066s]     p = sre_parse.parse(p, flags)
+[1.066s]   File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+[1.069s]     p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+[1.070s]   File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+[1.070s]     itemsappend(_parse(source, state, verbose, nested + 1,
+[1.070s]   File "/usr/lib/python3.10/sre_parse.py", line 526, in _parse
+[1.071s]     code = _escape(source, this, state)
+[1.071s]   File "/usr/lib/python3.10/sre_parse.py", line 425, in _escape
+[1.071s]     if len(escape) == 2:
+[1.071s] KeyboardInterrupt
+[1.079s] gmake[2]: *** [CMakeFiles/ament_cmake_python_build_point_cal_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_point_cal_egg] Interrupt
+[1.079s] gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/ament_cmake_python_build_point_cal_egg.dir/all] Interrupt
+[1.079s] gmake: *** [Makefile:146: all] Interrupt

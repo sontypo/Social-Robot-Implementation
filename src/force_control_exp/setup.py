@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'force_control_exp_node = force_control_exp.dynamic_updater:main'
+            'force_control_exp_node = force_control_exp.dynamic_updater:main',
+            'scan_distances = force_control_exp.getScan:main'
         ],
     },
 )

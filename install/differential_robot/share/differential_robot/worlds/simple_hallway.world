@@ -1,0 +1,387 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='simple_hallway'>
+      <pose>0 0 0 0 -0 0</pose>
+      <link name='Wall_0'>
+        <collision name='Wall_0_Collision'>
+          <geometry>
+            <box>
+              <size>12.15 0.15 2</size>
+            </box>
+          </geometry>
+          <pose>0 0 1 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_0_Visual'>
+          <pose>0 0 1 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>12.15 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/CeilingTiled</name>
+            </script>
+            <ambient>0.760784 0.662745 0.627451 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>0 -1.7 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_5'>
+        <collision name='Wall_5_Collision'>
+          <geometry>
+            <box>
+              <size>12.15 0.15 2</size>
+            </box>
+          </geometry>
+          <pose>0 0 1 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_5_Visual'>
+          <pose>0 0 1 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>12.15 0.15 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/CeilingTiled</name>
+            </script>
+            <ambient>0.760784 0.662745 0.627451 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>0 1.7 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <state world_name='default'>
+      <sim_time>1919 30000000</sim_time>
+      <real_time>1930 389703444</real_time>
+      <wall_time>1722658892 281850472</wall_time>
+      <iterations>1919030</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='simple_hallway'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_0'>
+          <pose>0 -1.7 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_5'>
+          <pose>0 1.7 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+
+    <!-- A pedestrian -->
+    <actor name="actor_1">
+      <pose>0 0 1 0 0 0</pose>
+      <skin>
+        <filename>walk.dae</filename>
+        <!-- <filename>model://DoctorFemaleWalk/meshes/DoctorFemaleWalk.dae</filename> -->
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <!-- <filename>model://DoctorFemaleWalk/meshes/DoctorFemaleWalk.dae</filename> -->
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <plugin name="actor_plugin" filename="libgazebo_ros_actor_command.so">
+        <follow_mode>path</follow_mode>
+        <!--<follow_mode>velocity</follow_mode>-->
+        <vel_topic>/actor_1/human_cmd_vel</vel_topic>
+        <path_topic>/actor_1/human_cmd_path</path_topic>
+        <animation_factor>4.0</animation_factor>
+        <linear_tolerance>0.1</linear_tolerance>
+        <linear_velocity>1</linear_velocity>
+        <angular_tolerance>0.0872</angular_tolerance>
+        <angular_velocity>2.5</angular_velocity>
+        <default_rotation>1.57</default_rotation>
+        <x_reset>5</x_reset>
+        <y_reset>0</y_reset>
+        <z_reset>1</z_reset>
+      </plugin>
+
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>2 0 0 0 0 0.5235987</pose>
+          </waypoint>
+          <waypoint>
+            <time>10</time>
+            <pose>4 1 0 0 0 1.0471975</pose>
+          </waypoint>
+          <waypoint>
+            <time>20</time>
+            <pose>5 2 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>30</time>
+            <pose>7 2 0 0 0 -1.0471975</pose>
+          </waypoint>
+          <waypoint>
+            <time>40</time>
+            <pose>8 1 0 0 0 -1.570796</pose>
+          </waypoint>
+          <waypoint>
+            <time>55</time>
+            <pose>8 -1 0 0 0 -2.094395</pose>
+          </waypoint>
+          <waypoint>
+            <time>65</time>
+            <pose>7 -2 0 0 0 3.141592</pose>
+          </waypoint>
+          <waypoint>
+            <time>75</time>
+            <pose>5 -2 0 0 0 2.094395</pose>
+          </waypoint>
+          <waypoint>
+            <time>85</time>
+            <pose>4 -1 0 0 0 2.617993</pose>
+          </waypoint>
+          <waypoint>
+            <time>95</time>
+            <pose>2 0 0 0 0 4.712</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>    
+
+    <actor name="actor_2">
+      <pose>0 0 1 0 0 0</pose>
+      <skin>
+        <filename>walk.dae</filename>
+        <!-- <filename>model://DoctorFemaleWalk/meshes/DoctorFemaleWalk.dae</filename> -->
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <!-- <filename>model://DoctorFemaleWalk/meshes/DoctorFemaleWalk.dae</filename> -->
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <plugin name="actor_plugin" filename="libgazebo_ros_actor_command.so">
+        <follow_mode>path</follow_mode>
+        <!--<follow_mode>velocity</follow_mode>-->
+        <vel_topic>/actor_2/human_cmd_vel</vel_topic>
+        <path_topic>/actor_2/human_cmd_path</path_topic>
+        <animation_factor>4.0</animation_factor>
+        <linear_tolerance>0.1</linear_tolerance>
+        <linear_velocity>1</linear_velocity>
+        <angular_tolerance>0.0872</angular_tolerance>
+        <angular_velocity>2.5</angular_velocity>
+        <default_rotation>1.57</default_rotation>
+        <x_reset>5</x_reset>
+        <y_reset>0</y_reset>
+        <z_reset>1</z_reset>
+      </plugin>
+
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>2 0 0 0 0 0.5235987</pose>
+          </waypoint>
+          <waypoint>
+            <time>10</time>
+            <pose>4 1 0 0 0 1.0471975</pose>
+          </waypoint>
+          <waypoint>
+            <time>20</time>
+            <pose>5 2 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>30</time>
+            <pose>7 2 0 0 0 -1.0471975</pose>
+          </waypoint>
+          <waypoint>
+            <time>40</time>
+            <pose>8 1 0 0 0 -1.570796</pose>
+          </waypoint>
+          <waypoint>
+            <time>55</time>
+            <pose>8 -1 0 0 0 -2.094395</pose>
+          </waypoint>
+          <waypoint>
+            <time>65</time>
+            <pose>7 -2 0 0 0 3.141592</pose>
+          </waypoint>
+          <waypoint>
+            <time>75</time>
+            <pose>5 -2 0 0 0 2.094395</pose>
+          </waypoint>
+          <waypoint>
+            <time>85</time>
+            <pose>4 -1 0 0 0 2.617993</pose>
+          </waypoint>
+          <waypoint>
+            <time>95</time>
+            <pose>2 0 0 0 0 4.712</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>    
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-16.2684 -0.40254 21.7324 -0 0.8658 0.008217</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>

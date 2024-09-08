@@ -1,0 +1,29 @@
+[0.708s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/obstacle_detect -- -j8 -l8
+[0.839s] Built target ament_cmake_python_copy_obstacle_detect
+[1.048s] Traceback (most recent call last):
+[1.048s]   File "/home/saun/ctrl_mr_dynamic/build/obstacle_detect/ament_cmake_python/obstacle_detect/setup.py", line 1, in <module>
+[1.049s]     from setuptools import find_packages
+[1.050s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+[1.053s]     import setuptools.version
+[1.053s]   File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+[1.053s]     import pkg_resources
+[1.053s]   File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 76, in <module>
+[1.068s]     __import__('pkg_resources.extern.packaging.version')
+[1.069s]   File "/usr/lib/python3/dist-packages/pkg_resources/_vendor/packaging/version.py", line 9, in <module>
+[1.069s]     from typing import Callable, Iterator, List, Optional, SupportsInt, Tuple, Union
+[1.069s]   File "/usr/lib/python3.10/typing.py", line 2603, in <module>
+[1.069s]     class BinaryIO(IO[bytes]):
+[1.069s]   File "/usr/lib/python3.10/typing.py", line 309, in inner
+[1.069s]     return cached(*args, **kwds)
+[1.070s]   File "/usr/lib/python3.10/typing.py", line 1346, in __class_getitem__
+[1.070s]     return _GenericAlias(cls, params,
+[1.070s]   File "/usr/lib/python3.10/typing.py", line 1025, in __init__
+[1.072s]     self.__parameters__ = _collect_type_vars(params, typevar_types=_typevar_types)
+[1.073s]   File "/usr/lib/python3.10/typing.py", line 987, in __setattr__
+[1.073s]     if _is_dunder(attr) or attr in {'_name', '_inst', '_nparams',
+[1.074s]   File "/usr/lib/python3.10/typing.py", line 936, in _is_dunder
+[1.075s]     return attr.startswith('__') and attr.endswith('__')
+[1.076s] KeyboardInterrupt
+[1.089s] gmake[2]: *** [CMakeFiles/ament_cmake_python_build_obstacle_detect_egg.dir/build.make:70: CMakeFiles/ament_cmake_python_build_obstacle_detect_egg] Interrupt
+[1.089s] gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/ament_cmake_python_build_obstacle_detect_egg.dir/all] Interrupt
+[1.089s] gmake: *** [Makefile:146: all] Interrupt
