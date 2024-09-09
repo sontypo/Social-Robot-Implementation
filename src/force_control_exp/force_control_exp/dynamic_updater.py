@@ -152,6 +152,14 @@ class DynamicUpdater(Node):
             self.robot_prev_pose = self.robot_pose
             return
         
+        # Define conversion matrix
+        # for designated force
+        self.des_conversion = np.array([ [math.cos(self.theta), 0], [-math.sin(self.theta), 0] ])
+        # for boundary force
+        self.bound_conversion = np.array([ [0, math.sin(self.theta)], [0, math.cos(self.theta)] ])
+        # for conversion F_total from global to robot frame
+        self.total_conversion = np.array([ [math.cos(self.theta), math.sin(self.theta)], [-math.sin(self.theta), math.cos(self.theta)] ])
+        
         pose_diff = math.sqrt((self.robot_prev_pose.x - self.robot_pose.x)**2 + (self.robot_prev_pose.y - self.robot_pose.y)**2)
         # Compute the boundary force applied to the mobile robot
         # if pose_diff >= self.diff_thres:
@@ -160,7 +168,7 @@ class DynamicUpdater(Node):
         d2bound_L = (self.boundary_dis / 2) - self.robot_pose.y
         d2bound_R = (self.boundary_dis / 2) - (-self.robot_pose.y)
         # Compute the boundary forces from both sides
-        # Robot frame
+        # This is Global frame
         self.F_bound_L = np.array( [0, self.alpha_bound * math.exp(-d2bound_L / self.beta_bound)] )
         
         self.F_bound_R = np.array( [0, self.alpha_bound * math.exp(-d2bound_R / self.beta_bound)] )
@@ -168,7 +176,7 @@ class DynamicUpdater(Node):
         # Total boundary force
         self.F_bound = self.F_bound_R - self.F_bound_L
         
-        # Global frame
+        # We have to convert the boundary force to the robot frame
         self.F_bound = np.dot( self.bound_conversion, (self.F_bound_R - self.F_bound_L) )
         
         # Update robot position
@@ -182,11 +190,12 @@ class DynamicUpdater(Node):
         
         if len(markers_msg.data) != 0:
             self.get_logger().info('Marker detected !!!')
+            person_data = np.array(markers_msg.data)
             # Compute the linear velocity of the robot relative to the object
             vec_relative_vel = np.array([self.robot_velocity.linear.x - self.object_linear_vel.x, self.robot_velocity.linear.y - self.object_linear_vel.y])
             
             # Compute the vectorized distance between the robot and the object
-            vec_dis = np.array([-markers_msg.data[0] + self.robot_pose.x, -markers_msg.data[1] + self.robot_pose.y])
+            vec_dis = np.array([-person_data[0] + self.robot_pose.x, -person_data[1] + self.robot_pose.y])
             
             # Encounter angle's cosine calculation
             cos_phi_ij = (vec_relative_vel / np.linalg.norm(vec_relative_vel)) * (-vec_dis / np.linalg.norm(vec_dis))
@@ -195,7 +204,7 @@ class DynamicUpdater(Node):
             Gamma = self.gamma_function(self.Lambda, cos_phi_ij)
             
             # Compute the distance between the robot and the object
-            distance = math.sqrt((markers_msg.data[0] - self.robot_pose.x)**2 + (markers_msg.data[1] - self.robot_pose.y)**2)
+            distance = math.sqrt((person_data[0] - self.robot_pose.x)**2 + (person_data[1] - self.robot_pose.y)**2)
                                             
             # Compute the social force applied to the mobile robot
             self.F_soc = Gamma * self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance)
@@ -209,18 +218,21 @@ class DynamicUpdater(Node):
                 
         # Designed velocity of the mobile robot
         s_ = np.linalg.norm(self.F_soc) + np.linalg.norm(self.F_bound)
-        self.v_des = math.exp( -s_ / self.sigma ) * np.array([self.v_max_robot, 0])
+        # self.v_des = math.exp( -s_ / self.sigma ) * np.array([self.v_max_robot, 0])
+        # To robot frame
+        self.v_des = math.exp( -s_ / self.sigma ) * np.dot(self.des_conversion, np.array([self.v_max_robot, 0]))
         
         # Compute the designated force applied to the mobile robot
         # Robot frame
         F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
-        
-        # Global frame
-        F_des = np.dot(self.des_conversion, F_des)
+        # F_des = np.dot(self.des_conversion, F_des)
         self.F_des = F_des
             
         # Total force applied to the mobile robot
-        self.F_total = self.F_des + self.F_soc + self.F_bound
+        F_total = self.F_des + self.F_soc + self.F_bound
+        # To Robot frame
+        # self.F_total = np.dot(self.total_conversion, F_total) 
+        self.F_total = F_total
         
         print("=======================================")
         print("- Pose different: ", pose_diff)
