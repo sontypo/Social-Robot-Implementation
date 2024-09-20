@@ -55,7 +55,7 @@ class DynamicUpdater(Node):
         self.declare_parameter('beta', 1.806738)
         self.beta = self.get_parameter('beta').get_parameter_value().double_value
         
-        self.declare_parameter('alpha_bound', 100)
+        self.declare_parameter('alpha_bound', 100.0)
         self.alpha_bound = self.get_parameter('alpha_bound').get_parameter_value().double_value
         
         self.declare_parameter('beta_bound', 3.5)
