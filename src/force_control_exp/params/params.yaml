@@ -1,7 +1,7 @@
 force_control_exp_node:
   ros__parameters:
     using_lidar: true
-    total_mass: 25.0
+    total_mass: 15.0
     m_wheel: 2.5
     R_wheel: 0.08
     v_max_robot: 2.5

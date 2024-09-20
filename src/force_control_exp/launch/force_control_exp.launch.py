@@ -6,7 +6,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     pkg_share = get_package_share_directory('force_control_exp')
     
-    config = os.path.join(pkg_share, 'config', 'params.yaml')
+    config = os.path.join(pkg_share, 'params', 'params.yaml')
     
     force_control_exp_node = Node(
         package='force_control_exp',
