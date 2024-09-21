@@ -1,0 +1,73 @@
+[0.063s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/autonoumous_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/autonoumous_navigation -- -j8 -l8
+[0.788s] Built target ament_cmake_python_copy_autonoumous_navigation
+[0.788s] running egg_info
+[0.789s] writing autonoumous_navigation.egg-info/PKG-INFO
+[0.789s] writing dependency_links to autonoumous_navigation.egg-info/dependency_links.txt
+[0.789s] writing top-level names to autonoumous_navigation.egg-info/top_level.txt
+[0.789s] reading manifest file 'autonoumous_navigation.egg-info/SOURCES.txt'
+[0.790s] writing manifest file 'autonoumous_navigation.egg-info/SOURCES.txt'
+[0.790s] Built target ament_cmake_python_build_autonoumous_navigation_egg
+[0.799s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/autonoumous_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/autonoumous_navigation -- -j8 -l8
+[0.870s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/autonoumous_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/autonoumous_navigation
+[0.900s] -- Install configuration: ""
+[0.900s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/pythonpath.sh
+[0.904s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/pythonpath.dsv
+[0.905s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info
+[0.905s] -- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info/dependency_links.txt
+[0.905s] -- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info/top_level.txt
+[0.906s] -- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info/SOURCES.txt
+[0.906s] -- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info/PKG-INFO
+[0.906s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation
+[0.906s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation/__init__.py
+[0.987s] Listing '/home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation'...
+[0.997s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch
+[0.997s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/merge_maps_kinematic_launch.py
+[0.998s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/online_sync_launch.py
+[0.998s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/navigation_real.launch.py
+[0.998s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/slam_gazebo.launch.py
+[0.999s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/online_sync_launch_real.py
+[0.999s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/online_async_launch.py
+[0.999s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/lifelong_launch.py
+[0.999s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/offline_launch.py
+[0.999s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/slam_real.launch.py
+[0.999s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/online_async_launch_real.py
+[1.000s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/navigation_gazebo.launch.py
+[1.000s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/localization_launch.py
+[1.000s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config
+[1.000s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_online_async.yaml
+[1.000s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_online_sync.yaml
+[1.000s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/slam_toolbox_default.rviz
+[1.000s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/nrsl_real.yaml
+[1.001s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_online_sync_real.yaml
+[1.001s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/nrsl.yaml
+[1.001s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_online_async_real.yaml
+[1.005s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/params.yaml
+[1.005s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_lifelong.yaml
+[1.006s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_localization.yaml
+[1.006s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_offline.yaml
+[1.006s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps
+[1.006s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/simulation_map.yaml
+[1.006s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/map.pgm
+[1.006s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/simulation_map.pgm
+[1.007s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/simulation_map2.pgm
+[1.007s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/map.yaml
+[1.007s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/simulation_map2.yaml
+[1.007s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/rviz
+[1.007s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/rviz/navigation2.rviz
+[1.007s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/rviz/slam.rviz
+[1.007s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/ament_index/resource_index/package_run_dependencies/autonoumous_navigation
+[1.008s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/ament_index/resource_index/parent_prefix_path/autonoumous_navigation
+[1.008s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/ament_prefix_path.sh
+[1.008s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/ament_prefix_path.dsv
+[1.008s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/path.sh
+[1.008s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/path.dsv
+[1.008s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/local_setup.bash
+[1.009s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/local_setup.sh
+[1.009s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/local_setup.zsh
+[1.009s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/local_setup.dsv
+[1.009s] -- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/package.dsv
+[1.009s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/ament_index/resource_index/packages/autonoumous_navigation
+[1.010s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/cmake/autonoumous_navigationConfig.cmake
+[1.010s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/cmake/autonoumous_navigationConfig-version.cmake
+[1.010s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/package.xml
+[1.014s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/autonoumous_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/autonoumous_navigation

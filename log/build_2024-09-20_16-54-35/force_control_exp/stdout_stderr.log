@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/force_control_exp/force_control_exp.egg-info/PKG-INFO
+writing dependency_links to ../../build/force_control_exp/force_control_exp.egg-info/dependency_links.txt
+writing entry points to ../../build/force_control_exp/force_control_exp.egg-info/entry_points.txt
+writing requirements to ../../build/force_control_exp/force_control_exp.egg-info/requires.txt
+writing top-level names to ../../build/force_control_exp/force_control_exp.egg-info/top_level.txt
+reading manifest file '../../build/force_control_exp/force_control_exp.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/force_control_exp/force_control_exp.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+creating /home/saun/ctrl_mr_dynamic/install/force_control_exp/share/force_control_exp/params
+copying params/params.yaml -> /home/saun/ctrl_mr_dynamic/install/force_control_exp/share/force_control_exp/params
+copying launch/force_control_exp.launch.py -> /home/saun/ctrl_mr_dynamic/install/force_control_exp/share/force_control_exp/launch
+running install_egg_info
+removing '/home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/python3.10/site-packages/force_control_exp-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/force_control_exp/force_control_exp.egg-info to /home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/python3.10/site-packages/force_control_exp-0.0.0-py3.10.egg-info
+running install_scripts
+Installing force_control_exp_node script to /home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/force_control_exp
+Installing get_csv script to /home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/force_control_exp
+Installing scan_distances script to /home/saun/ctrl_mr_dynamic/install/force_control_exp/lib/force_control_exp
+writing list of installed files to '/home/saun/ctrl_mr_dynamic/build/force_control_exp/install.log'

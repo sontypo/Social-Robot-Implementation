@@ -12,6 +12,9 @@ setup.py
 force_control_exp/__init__.py
 force_control_exp/dynamic_updater.py
 force_control_exp/getScan.py
+force_control_exp/get_data.py
+launch/force_control_exp.launch.py
+params/params.yaml
 resource/force_control_exp
 test/test_copyright.py
 test/test_flake8.py

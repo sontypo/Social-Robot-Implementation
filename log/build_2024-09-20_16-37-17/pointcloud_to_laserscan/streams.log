@@ -1,0 +1,60 @@
+[0.728s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan -- -j8 -l8
+[0.864s] [ 10%] [32mBuilding CXX object CMakeFiles/laserscan_to_pointcloud.dir/src/laserscan_to_pointcloud_node.cpp.o[0m
+[0.879s] [ 20%] [32mBuilding CXX object CMakeFiles/laserscan_to_pointcloud_node.dir/rclcpp_components/node_main_laserscan_to_pointcloud_node.cpp.o[0m
+[0.879s] [ 30%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan_node.dir/rclcpp_components/node_main_pointcloud_to_laserscan_node.cpp.o[0m
+[6.159s] [ 40%] [32m[1mLinking CXX executable pointcloud_to_laserscan_node[0m
+[6.276s] [ 50%] [32m[1mLinking CXX executable laserscan_to_pointcloud_node[0m
+[6.374s] [ 50%] Built target pointcloud_to_laserscan_node
+[6.463s] [ 50%] Built target laserscan_to_pointcloud_node
+[15.446s] [ 60%] [32m[1mLinking CXX shared library liblaserscan_to_pointcloud.so[0m
+[16.165s] [ 60%] Built target laserscan_to_pointcloud
+[16.205s] [ 70%] [32mBuilding CXX object CMakeFiles/pointcloud_to_laserscan.dir/src/pointcloud_to_laserscan_node.cpp.o[0m
+[29.364s] [ 80%] [32m[1mLinking CXX shared library libpointcloud_to_laserscan.so[0m
+[30.110s] [ 80%] Built target pointcloud_to_laserscan
+[30.146s] [ 90%] [32mBuilding CXX object CMakeFiles/dummy_pointcloud_publisher.dir/src/dummy_pointcloud_publisher.cpp.o[0m
+[35.115s] [100%] [32m[1mLinking CXX executable dummy_pointcloud_publisher[0m
+[35.427s] [100%] Built target dummy_pointcloud_publisher
+[35.444s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan -- -j8 -l8
+[35.507s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan
+[35.518s] -- Install configuration: ""
+[35.519s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node
+[35.520s] -- Set runtime path of "/home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/laserscan_to_pointcloud_node" to ""
+[35.520s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node
+[35.522s] -- Set runtime path of "/home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/pointcloud_to_laserscan_node" to ""
+[35.522s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/include
+[35.523s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan
+[35.523s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/visibility_control.h
+[35.523s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/pointcloud_to_laserscan_node.hpp
+[35.523s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/include/pointcloud_to_laserscan/laserscan_to_pointcloud_node.hpp
+[35.523s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.sh
+[35.523s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/library_path.dsv
+[35.523s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so
+[35.541s] -- Set runtime path of "/home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/liblaserscan_to_pointcloud.so" to ""
+[35.542s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so
+[35.556s] -- Set runtime path of "/home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/libpointcloud_to_laserscan.so" to ""
+[35.556s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher
+[35.559s] -- Set runtime path of "/home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher" to ""
+[35.559s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch
+[35.559s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_pointcloud_to_laserscan_launch.py
+[35.560s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/pointcloud_to_laserscan_launch.py
+[35.560s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/launch/sample_laserscan_to_pointcloud_launch.py
+[35.560s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/ament_index/resource_index/package_run_dependencies/pointcloud_to_laserscan
+[35.560s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/ament_index/resource_index/parent_prefix_path/pointcloud_to_laserscan
+[35.560s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.sh
+[35.560s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/ament_prefix_path.dsv
+[35.560s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.sh
+[35.560s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/environment/path.dsv
+[35.561s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.bash
+[35.561s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.sh
+[35.561s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.zsh
+[35.561s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/local_setup.dsv
+[35.561s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv
+[35.561s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/ament_index/resource_index/packages/pointcloud_to_laserscan
+[35.561s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/ament_index/resource_index/rclcpp_components/pointcloud_to_laserscan
+[35.561s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_dependencies-extras.cmake
+[35.561s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_include_directories-extras.cmake
+[35.562s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/ament_cmake_export_libraries-extras.cmake
+[35.562s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig.cmake
+[35.562s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/cmake/pointcloud_to_laserscanConfig-version.cmake
+[35.563s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.xml
+[35.564s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pointcloud_to_laserscan

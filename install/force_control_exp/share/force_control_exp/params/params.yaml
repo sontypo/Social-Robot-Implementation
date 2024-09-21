@@ -1,0 +1,19 @@
+force_control_exp_node:
+  ros__parameters:
+    using_lidar: true
+    total_mass: 15.0
+    m_wheel: 2.5
+    R_wheel: 0.08
+    v_max_robot: 2.5
+    cam2com: 0.2
+    # Designated term
+    tau_d: 2.953125	# Original Ali's params: 0.2953125
+    sigma: 38.8623
+    # Social term
+    Lambda: 0.04375
+    alpha: 83.518066
+    beta: 1.806738
+    # Boundary term
+    alpha_bound: 100.0
+    beta_bound: 3.5
+    boundary_dis: 3.15
