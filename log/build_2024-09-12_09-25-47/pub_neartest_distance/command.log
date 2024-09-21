@@ -1,0 +1,4 @@
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/pub_neartest_distance': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pub_neartest_distance -- -j8 -l8
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/pub_neartest_distance' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pub_neartest_distance -- -j8 -l8
+Invoking command in '/home/saun/ctrl_mr_dynamic/build/pub_neartest_distance': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pub_neartest_distance
+Invoked command in '/home/saun/ctrl_mr_dynamic/build/pub_neartest_distance' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pub_neartest_distance

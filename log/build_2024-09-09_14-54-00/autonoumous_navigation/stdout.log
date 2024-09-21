@@ -1,0 +1,92 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)
+-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found rviz2: 11.2.13 (/opt/ros/humble/share/rviz2/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/saun/ctrl_mr_dynamic/build/autonoumous_navigation
+Built target ament_cmake_python_copy_autonoumous_navigation
+running egg_info
+writing autonoumous_navigation.egg-info/PKG-INFO
+writing dependency_links to autonoumous_navigation.egg-info/dependency_links.txt
+writing top-level names to autonoumous_navigation.egg-info/top_level.txt
+reading manifest file 'autonoumous_navigation.egg-info/SOURCES.txt'
+writing manifest file 'autonoumous_navigation.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_autonoumous_navigation_egg
+-- Install configuration: ""
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/pythonpath.sh
+-- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/pythonpath.dsv
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info
+-- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation-1.0.0-py3.10.egg-info/PKG-INFO
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation/__init__.py
+Listing '/home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/local/lib/python3.10/dist-packages/autonoumous_navigation'...
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/merge_maps_kinematic_launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/online_sync_launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/navigation_real.launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/slam_gazebo.launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/online_sync_launch_real.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/online_async_launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/lifelong_launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/offline_launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/slam_real.launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/online_async_launch_real.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/navigation_gazebo.launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/launch/localization_launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_online_async.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_online_sync.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/slam_toolbox_default.rviz
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/nrsl_real.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_online_sync_real.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/nrsl.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_online_async_real.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/params.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_lifelong.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_localization.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/config/mapper_params_offline.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/simulation_map.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/map.pgm
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/simulation_map.pgm
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/simulation_map2.pgm
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/map.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/maps/simulation_map2.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/rviz
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/rviz/navigation2.rviz
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/rviz/slam.rviz
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/ament_index/resource_index/package_run_dependencies/autonoumous_navigation
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/ament_index/resource_index/parent_prefix_path/autonoumous_navigation
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/ament_prefix_path.sh
+-- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/path.sh
+-- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/environment/path.dsv
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/local_setup.bash
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/local_setup.sh
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/local_setup.zsh
+-- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/local_setup.dsv
+-- Installing: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/package.dsv
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/ament_index/resource_index/packages/autonoumous_navigation
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/cmake/autonoumous_navigationConfig.cmake
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/cmake/autonoumous_navigationConfig-version.cmake
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/autonoumous_navigation/share/autonoumous_navigation/package.xml

@@ -1,0 +1,49 @@
+[0.742s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/point_cal': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/point_cal -- -j8 -l8
+[0.896s] Built target ament_cmake_python_copy_point_cal
+[1.512s] running egg_info
+[1.513s] writing point_cal.egg-info/PKG-INFO
+[1.515s] writing dependency_links to point_cal.egg-info/dependency_links.txt
+[1.515s] writing top-level names to point_cal.egg-info/top_level.txt
+[1.519s] reading manifest file 'point_cal.egg-info/SOURCES.txt'
+[1.520s] writing manifest file 'point_cal.egg-info/SOURCES.txt'
+[1.579s] Built target ament_cmake_python_build_point_cal_egg
+[1.822s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/point_cal' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/point_cal -- -j8 -l8
+[1.872s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/point_cal': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/point_cal
+[1.888s] -- Install configuration: ""
+[1.888s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/environment/pythonpath.sh
+[1.889s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/environment/pythonpath.dsv
+[1.892s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/local/lib/python3.10/dist-packages/point_cal-1.0.0-py3.10.egg-info
+[1.893s] -- Installing: /home/saun/ctrl_mr_dynamic/install/point_cal/local/lib/python3.10/dist-packages/point_cal-1.0.0-py3.10.egg-info/dependency_links.txt
+[1.894s] -- Installing: /home/saun/ctrl_mr_dynamic/install/point_cal/local/lib/python3.10/dist-packages/point_cal-1.0.0-py3.10.egg-info/top_level.txt
+[1.894s] -- Installing: /home/saun/ctrl_mr_dynamic/install/point_cal/local/lib/python3.10/dist-packages/point_cal-1.0.0-py3.10.egg-info/SOURCES.txt
+[1.894s] -- Installing: /home/saun/ctrl_mr_dynamic/install/point_cal/local/lib/python3.10/dist-packages/point_cal-1.0.0-py3.10.egg-info/PKG-INFO
+[1.894s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/local/lib/python3.10/dist-packages/point_cal
+[1.894s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/local/lib/python3.10/dist-packages/point_cal/__init__.py
+[1.967s] Listing '/home/saun/ctrl_mr_dynamic/install/point_cal/local/lib/python3.10/dist-packages/point_cal'...
+[1.976s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/lib/point_cal/point_cal.py
+[1.977s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/lib/point_cal/point_cal_gazebo.launch.py
+[1.977s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/lib/point_cal/point_cal_real.launch.py
+[1.980s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/launch
+[1.980s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/launch/point_cal_real.launch.py
+[1.980s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/launch/point_cal_gazebo.launch.py
+[1.980s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/config
+[1.981s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/config/params_gazebo.yaml
+[1.981s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/config/params.yaml
+[1.981s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/rviz2
+[1.981s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/rviz2/row_detection.rviz
+[1.983s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/ament_index/resource_index/package_run_dependencies/point_cal
+[1.983s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/ament_index/resource_index/parent_prefix_path/point_cal
+[1.983s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/environment/ament_prefix_path.sh
+[1.983s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/environment/ament_prefix_path.dsv
+[1.983s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/environment/path.sh
+[1.983s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/environment/path.dsv
+[1.984s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/local_setup.bash
+[1.984s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/local_setup.sh
+[1.984s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/local_setup.zsh
+[1.984s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/local_setup.dsv
+[1.984s] -- Installing: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/package.dsv
+[1.984s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/ament_index/resource_index/packages/point_cal
+[1.984s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/cmake/point_calConfig.cmake
+[1.985s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/cmake/point_calConfig-version.cmake
+[1.985s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/point_cal/share/point_cal/package.xml
+[2.010s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/point_cal' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/point_cal

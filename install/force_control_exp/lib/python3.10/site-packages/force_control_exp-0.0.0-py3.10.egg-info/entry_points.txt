@@ -1,4 +1,5 @@
 [console_scripts]
 force_control_exp_node = force_control_exp.dynamic_updater:main
+get_csv = force_control_exp.get_data:main
 scan_distances = force_control_exp.getScan:main
 

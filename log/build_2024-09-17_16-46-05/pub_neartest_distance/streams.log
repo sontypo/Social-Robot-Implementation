@@ -1,0 +1,44 @@
+[0.017s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/pub_neartest_distance': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pub_neartest_distance -- -j8 -l8
+[0.138s] Built target ament_cmake_python_copy_pub_neartest_distance
+[0.717s] running egg_info
+[0.718s] writing pub_neartest_distance.egg-info/PKG-INFO
+[0.718s] writing dependency_links to pub_neartest_distance.egg-info/dependency_links.txt
+[0.718s] writing top-level names to pub_neartest_distance.egg-info/top_level.txt
+[0.721s] reading manifest file 'pub_neartest_distance.egg-info/SOURCES.txt'
+[0.721s] writing manifest file 'pub_neartest_distance.egg-info/SOURCES.txt'
+[0.751s] Built target ament_cmake_python_build_pub_neartest_distance_egg
+[0.830s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/pub_neartest_distance' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/pub_neartest_distance -- -j8 -l8
+[0.892s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/pub_neartest_distance': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pub_neartest_distance
+[0.961s] -- Install configuration: ""
+[0.961s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/environment/pythonpath.sh
+[0.961s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/environment/pythonpath.dsv
+[0.961s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/local/lib/python3.10/dist-packages/pub_neartest_distance-1.0.0-py3.10.egg-info
+[0.961s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/local/lib/python3.10/dist-packages/pub_neartest_distance-1.0.0-py3.10.egg-info/dependency_links.txt
+[0.961s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/local/lib/python3.10/dist-packages/pub_neartest_distance-1.0.0-py3.10.egg-info/top_level.txt
+[0.961s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/local/lib/python3.10/dist-packages/pub_neartest_distance-1.0.0-py3.10.egg-info/SOURCES.txt
+[0.961s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/local/lib/python3.10/dist-packages/pub_neartest_distance-1.0.0-py3.10.egg-info/PKG-INFO
+[0.961s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/local/lib/python3.10/dist-packages/pub_neartest_distance
+[0.962s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/local/lib/python3.10/dist-packages/pub_neartest_distance/__init__.py
+[1.048s] Listing '/home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/local/lib/python3.10/dist-packages/pub_neartest_distance'...
+[1.054s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/lib/pub_neartest_distance/pub_neartest_distance.py
+[1.060s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/lib/pub_neartest_distance/pub_neartest_distance.launch.py
+[1.060s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/launch
+[1.061s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/launch/pub_neartest_distance.launch.py
+[1.061s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/config
+[1.061s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/config/params.yaml
+[1.061s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/ament_index/resource_index/package_run_dependencies/pub_neartest_distance
+[1.061s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/ament_index/resource_index/parent_prefix_path/pub_neartest_distance
+[1.061s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/environment/ament_prefix_path.sh
+[1.061s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/environment/ament_prefix_path.dsv
+[1.061s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/environment/path.sh
+[1.062s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/environment/path.dsv
+[1.062s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/local_setup.bash
+[1.066s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/local_setup.sh
+[1.068s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/local_setup.zsh
+[1.069s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/local_setup.dsv
+[1.071s] -- Installing: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/package.dsv
+[1.071s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/ament_index/resource_index/packages/pub_neartest_distance
+[1.071s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/cmake/pub_neartest_distanceConfig.cmake
+[1.072s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/cmake/pub_neartest_distanceConfig-version.cmake
+[1.072s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/pub_neartest_distance/share/pub_neartest_distance/package.xml
+[1.125s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/pub_neartest_distance' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/pub_neartest_distance

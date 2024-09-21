@@ -1,0 +1,40 @@
+Built target ament_cmake_python_copy_obstacle_detect
+running egg_info
+writing obstacle_detect.egg-info/PKG-INFO
+writing dependency_links to obstacle_detect.egg-info/dependency_links.txt
+writing top-level names to obstacle_detect.egg-info/top_level.txt
+reading manifest file 'obstacle_detect.egg-info/SOURCES.txt'
+writing manifest file 'obstacle_detect.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_obstacle_detect_egg
+-- Install configuration: ""
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/pythonpath.sh
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/pythonpath.dsv
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/PKG-INFO
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect/__init__.py
+Listing '/home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect'...
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/lib/obstacle_detect/cost_map.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/lib/obstacle_detect/cost_map.launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/launch
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/launch/cost_map.launch.py
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/config
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/config/params.yaml
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/ament_index/resource_index/package_run_dependencies/obstacle_detect
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/ament_index/resource_index/parent_prefix_path/obstacle_detect
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/ament_prefix_path.sh
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/path.sh
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/path.dsv
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.bash
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.sh
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.zsh
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.dsv
+-- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/package.dsv
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/ament_index/resource_index/packages/obstacle_detect
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/cmake/obstacle_detectConfig.cmake
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/cmake/obstacle_detectConfig-version.cmake
+-- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/package.xml

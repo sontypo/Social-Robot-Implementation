@@ -1,0 +1,44 @@
+[0.746s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/obstacle_detect -- -j8 -l8
+[0.882s] Built target ament_cmake_python_copy_obstacle_detect
+[1.568s] running egg_info
+[1.568s] writing obstacle_detect.egg-info/PKG-INFO
+[1.568s] writing dependency_links to obstacle_detect.egg-info/dependency_links.txt
+[1.568s] writing top-level names to obstacle_detect.egg-info/top_level.txt
+[1.572s] reading manifest file 'obstacle_detect.egg-info/SOURCES.txt'
+[1.573s] writing manifest file 'obstacle_detect.egg-info/SOURCES.txt'
+[1.670s] Built target ament_cmake_python_build_obstacle_detect_egg
+[1.918s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --build /home/saun/ctrl_mr_dynamic/build/obstacle_detect -- -j8 -l8
+[1.979s] Invoking command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/obstacle_detect
+[1.996s] -- Install configuration: ""
+[1.996s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/pythonpath.sh
+[2.000s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/pythonpath.dsv
+[2.000s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info
+[2.000s] -- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/dependency_links.txt
+[2.001s] -- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/top_level.txt
+[2.001s] -- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/SOURCES.txt
+[2.001s] -- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect-1.0.0-py3.10.egg-info/PKG-INFO
+[2.001s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect
+[2.001s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect/__init__.py
+[2.064s] Listing '/home/saun/ctrl_mr_dynamic/install/obstacle_detect/local/lib/python3.10/dist-packages/obstacle_detect'...
+[2.087s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/lib/obstacle_detect/cost_map.py
+[2.097s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/lib/obstacle_detect/cost_map.launch.py
+[2.097s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/launch
+[2.097s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/launch/cost_map.launch.py
+[2.097s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/config
+[2.098s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/config/params.yaml
+[2.098s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/ament_index/resource_index/package_run_dependencies/obstacle_detect
+[2.098s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/ament_index/resource_index/parent_prefix_path/obstacle_detect
+[2.098s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/ament_prefix_path.sh
+[2.098s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/ament_prefix_path.dsv
+[2.098s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/path.sh
+[2.098s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/environment/path.dsv
+[2.098s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.bash
+[2.100s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.sh
+[2.100s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.zsh
+[2.101s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/local_setup.dsv
+[2.101s] -- Installing: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/package.dsv
+[2.103s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/ament_index/resource_index/packages/obstacle_detect
+[2.107s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/cmake/obstacle_detectConfig.cmake
+[2.108s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/cmake/obstacle_detectConfig-version.cmake
+[2.108s] -- Up-to-date: /home/saun/ctrl_mr_dynamic/install/obstacle_detect/share/obstacle_detect/package.xml
+[2.162s] Invoked command in '/home/saun/ctrl_mr_dynamic/build/obstacle_detect' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saun/ctrl_mr_dynamic/install/simple_control_pkg:/home/saun/ctrl_mr_dynamic/install/force_control_exp:/home/saun/ctrl_mr_dynamic/install/differential_robot:/opt/ros/humble /usr/bin/cmake --install /home/saun/ctrl_mr_dynamic/build/obstacle_detect

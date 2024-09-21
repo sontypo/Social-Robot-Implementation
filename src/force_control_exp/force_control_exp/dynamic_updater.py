@@ -146,6 +146,7 @@ class DynamicUpdater(Node):
         vel_msg.angular.z = dynamic_velocity[1]
         self.velocity_command.publish(vel_msg)
         
+        
     def odom_callback(self, msg):
         self.robot_pose = msg.pose.pose.position
         self.robot_velocity = msg.twist.twist
@@ -156,9 +157,13 @@ class DynamicUpdater(Node):
             self.robot_prev_pose = self.robot_pose
             return
         
+        
     def get_scan(self, scan: LaserScan):
-        left_indices = range(480, 600)  # Indices corresponding to angles around +π/2 (left side)
-        right_indices = range(120, 240)  # Indices corresponding to angles around -π/2 (right side)
+        deg_theta = math.floor((self.theta * 180) / math.pi)
+        calib_samples = deg_theta * 2
+        
+        left_indices = range(480 - calib_samples, 600 - calib_samples)  # Indices corresponding to angles around +π/2 (left side)
+        right_indices = range(120 - calib_samples, 240 - calib_samples)  # Indices corresponding to angles around -π/2 (right side)
         
         scan_range = []
 
@@ -180,6 +185,7 @@ class DynamicUpdater(Node):
         # Publish the markers
         self.left_marker_publisher.publish(left_markers)
         self.right_marker_publisher.publish(right_markers)
+        
         
     def create_markers(self, scan, indices, ns, marker_id_offset):
         """Create markers for the LIDAR scan for the given indices."""
@@ -218,11 +224,12 @@ class DynamicUpdater(Node):
                 marker_array.markers.append(marker) # type: ignore
 
         return marker_array
-        
+    
     
     # The object's anisotropic behavior function
     def gamma_function(self, Lambda, cos_phi_ij):
         return Lambda + 0.5 * (1 - Lambda) * (1 + cos_phi_ij)
+    
 
     def object_position_callback(self, markers_msg):
         current_time = self.get_clock().now()
@@ -246,6 +253,7 @@ class DynamicUpdater(Node):
         # Compute the boundary force applied to the mobile robot
         if self.using_lidar:
             self.get_logger().info('Ultilizing LIDAR sensor')
+            self.get_logger().debug(self.cam2com)
             # Compute the boundary forces from both sides
             # This is Global frame
             self.F_bound_L = np.array( [0, self.alpha_bound * math.exp(-self.left_distance / self.beta_bound)] )
@@ -389,6 +397,7 @@ class DynamicUpdater(Node):
         force_msg.data.append(self.F_total[1])
         self.force_publisher.publish(force_msg)
         # self.get_logger().info(f'Fm: {self.F_total[0]} | Fn: {self.F_total[1]}')
+        
                             
     def update_dynamic(self, Fm, Fn, v_x, omega_z, theta, dt):
         # State space model of the pure dynamics
