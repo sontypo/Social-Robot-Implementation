@@ -28,6 +28,8 @@ class SideDistanceComputer(Node):
         self.left_marker_publisher = self.create_publisher(MarkerArray, 'left_markers', 10)
         self.right_marker_publisher = self.create_publisher(MarkerArray, 'right_markers', 10)
         self.theta = 0.0
+        self.declare_parameter('num_samples', 360)
+        self.num_samples = self.get_parameter('num_samples').get_parameter_value().double_value
         
         
     def odom_callback(self, msg):
@@ -39,10 +41,15 @@ class SideDistanceComputer(Node):
 
     def get_scan(self, scan: LaserScan):
         deg_theta = math.floor((self.theta * 180) / math.pi)
-        calib_samples = deg_theta * 2
+        if self.num_samples == 360:
+            calib_samples = deg_theta
+            left_indices = range(240 - calib_samples, 300 - calib_samples)  # Indices corresponding to angles around +π/2 (left side)
+            right_indices = range(60 - calib_samples, 120 - calib_samples)  # Indices corresponding to angles around -π/2 (right side)
+        else:
+            calib_samples = deg_theta * 2
         
-        left_indices = range(480 - calib_samples, 600 - calib_samples)  # Indices corresponding to angles around +π/2 (left side)
-        right_indices = range(120 - calib_samples, 240 - calib_samples)  # Indices corresponding to angles around -π/2 (right side)
+            left_indices = range(480 - calib_samples, 600 - calib_samples)  # Indices corresponding to angles around +π/2 (left side)
+            right_indices = range(120 - calib_samples, 240 - calib_samples)  # Indices corresponding to angles around -π/2 (right side)
         
         scan_range = []
 
@@ -56,6 +63,7 @@ class SideDistanceComputer(Node):
         
         self.left_distance = min(scan_range[i] for i in left_indices if scan_range[i] > scan.range_min)
         self.right_distance = min(scan_range[i] for i in right_indices if scan_range[i] > scan.range_min)
+        # print("Minimum distance: ", min(scan_range))
         
         # Extract points for both sides and create markers
         left_markers = self.create_markers(scan, left_indices, 'left_marker_ns', 0)

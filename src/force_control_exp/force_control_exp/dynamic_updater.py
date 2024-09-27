@@ -3,12 +3,13 @@ import rclpy.executors
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
-from geometry_msgs.msg import Point, Pose, Twist
+from geometry_msgs.msg import Point, PoseArray, Twist
 import rclpy.qos
 from std_msgs.msg import Int16MultiArray, Float32MultiArray 
 from visualization_msgs.msg import Marker, MarkerArray
 from gazebo_msgs.msg import ModelStates
 from sensor_msgs.msg import LaserScan
+import threading
 import math
 import numpy as np
 from tf_transformations import euler_from_quaternion
@@ -23,10 +24,13 @@ class DynamicUpdater(Node):
         self.declare_parameter('using_lidar', True)
         self.using_lidar = self.get_parameter('using_lidar').get_parameter_value().bool_value
         
-        self.declare_parameter('total_mass', 25.0)
+        self.declare_parameter('muilti_detections', True)
+        self.muilti_detections = self.get_parameter('muilti_detections').get_parameter_value().bool_value
+        
+        self.declare_parameter('total_mass', 20.0)
         self.total_mass = self.get_parameter('total_mass').get_parameter_value().double_value
         
-        self.declare_parameter('m_wheel', 2.5)
+        self.declare_parameter('m_wheel', 1.0)
         m_wheel = self.get_parameter('m_wheel').get_parameter_value().double_value
         
         self.declare_parameter('R_wheel', 0.08)
@@ -38,7 +42,7 @@ class DynamicUpdater(Node):
         self.declare_parameter('v_max_robot', 2.5)
         self.v_max_robot = self.get_parameter('v_max_robot').get_parameter_value().double_value
         
-        self.declare_parameter('tau_d', 2.953125)
+        self.declare_parameter('tau_d', 1.52953125)
         self.tau_d = self.get_parameter('tau_d').get_parameter_value().double_value    # original: 0.2953125 - it was Ali's params
         
         self.declare_parameter('sigma', 38.8623)
@@ -92,7 +96,8 @@ class DynamicUpdater(Node):
         # self.create_subscription(MarkerArray, '/person', self.object_position_callback, 10)
         self.object_positions = {}  # Store the previous positions and timestamps of object
         
-        self.create_subscription(Float32MultiArray, '/person_array', self.object_position_callback, 10)
+        # self.create_subscription(Float32MultiArray, '/person_array', self.object_position_callback, 10)
+        self.create_subscription(PoseArray, '/person_pose_array', self.human_pose_callback, 10)
 
         qos_policy = rclpy.qos.QoSProfile(reliability=rclpy.qos.ReliabilityPolicy.BEST_EFFORT,\
                                           history=rclpy.qos.HistoryPolicy.KEEP_LAST,\
@@ -126,8 +131,11 @@ class DynamicUpdater(Node):
         self.right_distance = self.boundary_dis / 2
         
         # Initialize variables to store previous position and time
+        self.previous_human_positions = []
         self.prev_obj_position = None
-        self.prev_time = None
+        self.prev_time = self.get_clock().now().seconds_nanoseconds()[0]
+        
+        self.lock = threading.Lock()
         
     
     def timer_callback(self):
@@ -156,6 +164,14 @@ class DynamicUpdater(Node):
         if self.robot_prev_pose is None:
             self.robot_prev_pose = self.robot_pose
             return
+        
+        # Define conversion matrix
+        # for designated force
+        self.des_conversion = np.array([ [math.cos(self.theta), 0], [-math.sin(self.theta), 0] ])
+        # for boundary force
+        self.bound_conversion = np.array([ [0, math.sin(self.theta)], [0, math.cos(self.theta)] ])
+        # for conversion F_total from global to robot frame
+        self.total_conversion = np.array([ [math.cos(self.theta), math.sin(self.theta)], [-math.sin(self.theta), math.cos(self.theta)] ])
         
         
     def get_scan(self, scan: LaserScan):
@@ -230,9 +246,205 @@ class DynamicUpdater(Node):
     def gamma_function(self, Lambda, cos_phi_ij):
         return Lambda + 0.5 * (1 - Lambda) * (1 + cos_phi_ij)
     
+    
+    # Human position specification
+    def match_poses_by_proximity(self, current_pose):
+        """Match current human poses to previous poses based on proximity."""
+        matched_poses = []
+        closest_prev_pose = None
+        min_distance = float('inf')
+
+        # Find the closest previous pose
+        for prev_pose in self.previous_human_positions:
+            distance = self.calculate_distance(current_pose.position, prev_pose.position)
+            if distance < min_distance:
+                min_distance = distance
+                closest_prev_pose = prev_pose
+
+        if closest_prev_pose is not None:
+            matched_poses.append((closest_prev_pose, current_pose))
+
+        return matched_poses
+
+    def calculate_distance(self, pos1, pos2):
+        """Calculate the Euclidean distance between two 3D points."""
+        return math.sqrt(
+            (pos2.x - pos1.x) ** 2 +
+            (pos2.y - pos1.y) ** 2 +
+            (pos2.z - pos1.z) ** 2
+        )
+        
+    def social_force_calc(self, human_poses):
+        # with self.lock:
+        # F_soc Calculation    
+        if len(human_poses) != 0:
+            # self.get_logger().info('Human detected !!!')
+            current_time = self.get_clock().now().seconds_nanoseconds()[0]
+            if len(self.previous_human_positions) == 0:
+                self.previous_human_positions = human_poses
+            
+            F_soc = np.array([0.0, 0.0])
+            self.F_soc = np.array([0.0, 0.0])
+            for i, human_pose in enumerate(human_poses):
+                self.get_logger().info(f'Human {i} detected !!!')
+                # Match current poses to previous poses based on proximity
+                matched_poses = self.match_poses_by_proximity(human_pose)
+                # Calculate velocities for matched pairs
+                for prev_pose, curr_pose in matched_poses:
+                    # Calculate velocity (change in position over time)                    
+                    delta_x = curr_pose.position.x - prev_pose.position.x
+                    delta_y = curr_pose.position.y - prev_pose.position.y
+                    delta_t = (current_time - self.prev_time)
+
+                    if delta_t <= 0:
+                        # self.get_logger().warn('Time interval must be positive')
+                        return
+
+                    # Calculate velocity components
+                    human_vel_x = delta_x / delta_t
+                    human_vel_y = delta_y / delta_t
+                    
+                    # Compute the linear velocity of the robot relative to the object
+                    # TODO: This should be in robot frame, so there is no linear.y velocity
+                    vec_relative_vel = np.array([self.robot_velocity.linear.x - human_vel_x, 0.0 - human_vel_y]) # TODO: Checked
+                    
+                    # Compute the vectorized distance between the robot and the object
+                    # TODO: This should probably only be computed by the human position (the relative position to the robot), no need to refer to the origin
+                    vec_dis = np.array([-curr_pose.position.x, -curr_pose.position.y]) # TODO: Checked
+                    
+                    # Encounter angle's cosine calculation
+                    cos_phi_ij = (vec_relative_vel / np.linalg.norm(vec_relative_vel)) * (-vec_dis / np.linalg.norm(vec_dis))
+                    if np.isnan(cos_phi_ij[0]):
+                        cos_phi_ij = np.array([0.0, 0.0])
+                    
+                    # Compute the object's anisotropic behavior
+                    Gamma = self.gamma_function(self.Lambda, cos_phi_ij)
+                    
+                    # Compute the distance between the robot and the object
+                    # TODO: This should probably only be computed by the human position (the relative position to the robot), no need to refer to the origin
+                    distance = math.sqrt((curr_pose.position.x)**2 + (curr_pose.position.y)**2) # TODO: Checked
+                                                    
+                    # Compute the social force applied to the mobile robot
+                    F_soc = Gamma * self.alpha * math.exp(-distance / self.beta) * (vec_dis / distance)
+
+                    if math.isnan(F_soc[0]):
+                        self.F_soc = np.array([0.0, 0.0])
+                    
+                self.F_soc += F_soc
+            # Update the previous time and positions
+            self.prev_time = current_time
+            self.previous_human_positions = human_poses
+        else: 
+            self.get_logger().info('No human detected !!!')
+            self.F_soc = np.array([0.0, 0.0])
+            
+    
+    def human_pose_callback(self, pose_array_msg: PoseArray):
+        # current_time = self.get_clock().now().seconds_nanoseconds()[0]
+        if self.robot_pose is None:
+            self.get_logger().warn('Waiting for odometry callback...')
+            return
+        
+        if self.robot_prev_pose is None:
+            self.robot_prev_pose = self.robot_pose
+            return
+        
+        pose_diff = math.sqrt((self.robot_prev_pose.x - self.robot_pose.x)**2 + (self.robot_prev_pose.y - self.robot_pose.y)**2)
+        # Compute the boundary force applied to the mobile robot
+        if self.using_lidar:
+            self.get_logger().info('Ultilizing LIDAR sensor')
+            self.get_logger().debug(self.cam2com)
+            # Compute the boundary forces from both sides
+            # This is Global frame
+            self.F_bound_L = np.array( [0, self.alpha_bound * math.exp(-self.left_distance / self.beta_bound)] )
+            
+            self.F_bound_R = np.array( [0, self.alpha_bound * math.exp(-self.right_distance / self.beta_bound)] )
+            
+            # Total boundary force
+            self.F_bound = self.F_bound_R - self.F_bound_L
+            
+            # We have to convert the boundary force to the robot frame
+            self.F_bound = np.dot( self.bound_conversion, (self.F_bound_R - self.F_bound_L) )
+            
+        else:
+            self.get_logger().info('Using default boundary distance')
+            # if pose_diff >= self.diff_thres:
+            ''' Assume that the mobile robot is always tends to be positioned at the center of the hallway, which is the intial position of it.
+            The boundary forces applied to the robot are from both sides, the distance between it and the wall is determined as: d2bound_L & d2bound_R '''
+            d2bound_L = (self.boundary_dis / 2) - self.robot_pose.y
+            d2bound_R = (self.boundary_dis / 2) - (-self.robot_pose.y)
+            # Compute the boundary forces from both sides
+            # This is Global frame
+            self.F_bound_L = np.array( [0, self.alpha_bound * math.exp(-d2bound_L / self.beta_bound)] )
+            
+            self.F_bound_R = np.array( [0, self.alpha_bound * math.exp(-d2bound_R / self.beta_bound)] )
+            
+            # Total boundary force
+            self.F_bound = self.F_bound_R - self.F_bound_L
+            
+            # We have to convert the boundary force to the robot frame
+            self.F_bound = np.dot( self.bound_conversion, (self.F_bound_R - self.F_bound_L) )
+        
+        # Update robot position
+        self.robot_prev_pose = self.robot_pose
+        # else: 
+        #     self.F_bound = np.array([0, 0])    
+        
+        # Reset to intial values of the related forces
+        self.F_des = np.array([0.0, 0.0])
+        self.F_soc = np.array([0.0, 0.0])
+        
+        process_thread = threading.Thread(target=self.social_force_calc, args=(pose_array_msg.poses,))
+        process_thread.start()
+                
+        # Current velocities of the mobile robot
+        # TODO: This should be in robot frame, so there is no linear.y velocity
+        self.v_cur = np.array([self.robot_velocity.linear.x, 0]) # TODO: Checked
+                
+        # Designed velocity of the mobile robot
+        s_ = np.linalg.norm(self.F_soc) + np.linalg.norm(self.F_bound)
+        if np.isnan(s_):
+            s_ = 0.0
+        # self.v_des = math.exp( -s_ / self.sigma ) * np.array([self.v_max_robot, 0])
+        # To robot frame
+        self.v_des = math.exp( -s_ / self.sigma ) * np.dot(self.des_conversion, np.array([self.v_max_robot, 0]))
+        
+        # Compute the designated force applied to the mobile robot
+        # Robot frame
+        F_des = self.total_mass * (self.v_des - self.v_cur) / self.tau_d
+        # F_des = np.dot(self.des_conversion, F_des)
+        self.F_des = F_des
+            
+        # Total force applied to the mobile robot
+        F_total = self.F_des + self.F_soc + self.F_bound
+        # To Robot frame
+        # self.F_total = np.dot(self.total_conversion, F_total) 
+        self.F_total = F_total
+        
+        print("=======================================")
+        print("- Pose different: ", pose_diff)
+        print("-----")
+        print("- v_des: ", self.v_des)
+        print("- F_des: ", self.F_des)
+        print("-----")
+        print("- F_soc: ", self.F_soc)
+        print("-----")
+        print("- Left_distance: ", d2bound_L if not self.using_lidar else self.left_distance)
+        print("- Right_distance: ", d2bound_R if not self.using_lidar else self.right_distance)
+        print("- F_bound: ", self.F_bound)
+        print("-----")
+        print("- Total force: ", self.F_total)
+        print("\n")
+
+        # Create and publish the force message
+        force_msg = Float32MultiArray()
+        force_msg.data.append(self.F_total[0])
+        force_msg.data.append(self.F_total[1])
+        self.force_publisher.publish(force_msg)
+    
 
     def object_position_callback(self, markers_msg):
-        current_time = self.get_clock().now()
+        current_time = self.get_clock().now().seconds_nanoseconds()[0]
         if self.robot_pose is None:
             self.get_logger().warn('Waiting for odometry callback...')
             return
@@ -298,17 +510,17 @@ class DynamicUpdater(Node):
             self.get_logger().info('Marker detected !!!')
             person_data = np.array(markers_msg.data)
             
-            if self.prev_obj_position is None or self.prev_time is None:
+            if self.prev_obj_position is None:
                 # Initial position setup
                 self.prev_obj_position = [person_data[0], person_data[1]]
                 self.prev_time = current_time
                 return
         
-            if self.prev_obj_position is not None and self.prev_time is not None:
+            if self.prev_obj_position is not None:
                 # Calculate displacement and time interval
                 delta_x = person_data[0] - self.prev_obj_position[0]
                 delta_y = person_data[1] - self.prev_obj_position[1]
-                delta_t = (current_time - self.prev_time).nanoseconds / 1e9
+                delta_t = (current_time - self.prev_time)
 
                 if delta_t <= 0:
                     self.get_logger().warn('Time interval must be positive')
@@ -421,8 +633,8 @@ class DynamicUpdater(Node):
         return z_in
         
 
-def main(args=None):
-    rclpy.init(args=args)
+def main():
+    rclpy.init()
     updater = DynamicUpdater()
 
     # Create an instance of MultiThreadedExecutor

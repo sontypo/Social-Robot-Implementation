@@ -244,55 +244,141 @@
         <angular_tolerance>0.0872</angular_tolerance>
         <angular_velocity>2.5</angular_velocity>
         <default_rotation>1.57</default_rotation>
-        <x_reset>5</x_reset>
-        <y_reset>0</y_reset>
+        <x_reset>8</x_reset>
+        <y_reset>1</y_reset>
         <z_reset>1</z_reset>
       </plugin>
 
       <script>
         <loop>true</loop>
-        <delay_start>0.000000</delay_start>
+        <delay_start>0.000</delay_start>
         <auto_start>true</auto_start>
         <trajectory id="0" type="walking">
           <waypoint>
             <time>0</time>
-            <pose>2 0 0 0 0 0.5235987</pose>
+            <pose>8.0 1 0 0 0 3.141592</pose>
           </waypoint>
           <waypoint>
-            <time>10</time>
-            <pose>4 1 0 0 0 1.0471975</pose>
+            <time>7.5</time>
+            <pose>7 0.5 0 0 0 3.66519</pose>
+          </waypoint>
+          <waypoint>
+            <time>15</time>
+            <pose>6 0 0 0 0 3.66519</pose>
+          </waypoint>
+          <waypoint>
+            <time>25</time>
+            <pose>4 0 0 0 0 3.141592</pose>
+          </waypoint>
+          <waypoint>
+            <time>36.5</time>
+            <pose>3 2.25 0 0 0 2.61799</pose>
+          </waypoint>
+          <waypoint>
+            <time>50</time>
+            <pose>-1 2.25 0 0 0 3.141592</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <!-- A pedestrian -->
+    <actor name="actor_2">
+      <pose>0 0 1 0 0 0</pose>
+      <skin>
+        <filename>walk.dae</filename>
+        <!-- <filename>model://DoctorFemaleWalk/meshes/DoctorFemaleWalk.dae</filename> -->
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <!-- <filename>model://DoctorFemaleWalk/meshes/DoctorFemaleWalk.dae</filename> -->
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <plugin name="actor2_plugin" filename="libgazebo_ros_actor_command.so">
+        <follow_mode>path</follow_mode>
+        <!--<follow_mode>velocity</follow_mode>-->
+        <vel_topic>/human_2_cmd_vel</vel_topic>
+        <path_topic>/human_2_cmd_path</path_topic>
+        <animation_factor>4.0</animation_factor>
+        <linear_tolerance>0.1</linear_tolerance>
+        <linear_velocity>1</linear_velocity>
+        <angular_tolerance>0.0872</angular_tolerance>
+        <angular_velocity>2.5</angular_velocity>
+        <default_rotation>1.57</default_rotation>
+        <x_reset>8</x_reset>
+        <y_reset>-1.5</y_reset>
+        <z_reset>1</z_reset>
+      </plugin>
+
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="1" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>8 -1.5 0 0 0 3.141592</pose>
           </waypoint>
           <waypoint>
             <time>20</time>
-            <pose>5 2 0 0 0 0</pose>
-          </waypoint>
-          <waypoint>
-            <time>30</time>
-            <pose>7 2 0 0 0 -1.0471975</pose>
+            <pose>4.5 -1.5 0 0 0 3.141592</pose>
           </waypoint>
           <waypoint>
             <time>40</time>
-            <pose>8 1 0 0 0 -1.570796</pose>
+            <pose>-1 -1.5 0 0 0 3.141592</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+
+    <!-- A pedestrian -->
+    <actor name="actor_3">
+      <pose>0 0 1 0 0 0</pose>
+      <skin>
+        <filename>walk.dae</filename>
+        <!-- <filename>model://DoctorFemaleWalk/meshes/DoctorFemaleWalk.dae</filename> -->
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <!-- <filename>model://DoctorFemaleWalk/meshes/DoctorFemaleWalk.dae</filename> -->
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <plugin name="actor3_plugin" filename="libgazebo_ros_actor_command.so">
+        <follow_mode>path</follow_mode>
+        <!--<follow_mode>velocity</follow_mode>-->
+        <vel_topic>/human_3_cmd_vel</vel_topic>
+        <path_topic>/human_3_cmd_path</path_topic>
+        <animation_factor>4.0</animation_factor>
+        <linear_tolerance>0.1</linear_tolerance>
+        <linear_velocity>1</linear_velocity>
+        <angular_tolerance>0.0872</angular_tolerance>
+        <angular_velocity>2.5</angular_velocity>
+        <default_rotation>1.57</default_rotation>
+        <x_reset>-1</x_reset>
+        <y_reset>1.25</y_reset>
+        <z_reset>1</z_reset>
+      </plugin>
+
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="2" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>-1 1.25 0 0 0 0</pose>
           </waypoint>
           <waypoint>
-            <time>55</time>
-            <pose>8 -1 0 0 0 -2.094395</pose>
+            <time>20</time>
+            <pose>4.5 1.25 0 0 0 0</pose>
           </waypoint>
           <waypoint>
-            <time>65</time>
-            <pose>7 -2 0 0 0 3.141592</pose>
-          </waypoint>
-          <waypoint>
-            <time>75</time>
-            <pose>5 -2 0 0 0 2.094395</pose>
-          </waypoint>
-          <waypoint>
-            <time>85</time>
-            <pose>4 -1 0 0 0 2.617993</pose>
-          </waypoint>
-          <waypoint>
-            <time>95</time>
-            <pose>2 0 0 0 0 4.712</pose>
+            <time>40</time>
+            <pose>8 1.25 0 0 0 0</pose>
           </waypoint>
         </trajectory>
       </script>
