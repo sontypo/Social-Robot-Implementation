@@ -24,6 +24,7 @@ setup(
     entry_points={
         'console_scripts': [
             'force_control_exp_node = force_control_exp.dynamic_updater:main',
+            'social_force_pub = force_control_exp.social_force_calulator:main',
             'scan_distances = force_control_exp.getScan:main',
             'get_csv = force_control_exp.get_data:main'
         ],
