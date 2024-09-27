@@ -96,8 +96,10 @@ class DynamicUpdater(Node):
         # self.create_subscription(MarkerArray, '/person', self.object_position_callback, 10)
         self.object_positions = {}  # Store the previous positions and timestamps of object
         
-        # self.create_subscription(Float32MultiArray, '/person_array', self.object_position_callback, 10)
-        self.create_subscription(PoseArray, '/person_pose_array', self.human_pose_callback, 10)
+        if self.muilti_detections:
+            self.create_subscription(PoseArray, '/person_pose_array', self.human_pose_callback, 10)
+        else:
+            self.create_subscription(Float32MultiArray, '/person_array', self.object_position_callback, 10)
 
         qos_policy = rclpy.qos.QoSProfile(reliability=rclpy.qos.ReliabilityPolicy.BEST_EFFORT,\
                                           history=rclpy.qos.HistoryPolicy.KEEP_LAST,\
